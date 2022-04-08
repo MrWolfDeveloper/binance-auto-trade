@@ -1,0 +1,11 @@
+{
+	"api_id": 90386,
+	"api_hash": "5cd39eee1a47204f902f90f57857e35a",
+	"username": "Mrfarahani",
+	"phone_number": "+989382181490",
+	"channels_monitor": [
+		{ "name": "Rastad Signals", "channel_id": 1370175279 },
+		{ "name": "exbforcesignal", "channel_id": 1556690070 },
+		{ "name": "BinanceKillers", "channel_id": 1749124080 }
+	]
+}

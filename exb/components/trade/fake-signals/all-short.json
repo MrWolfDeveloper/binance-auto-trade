@@ -1,0 +1,84 @@
+[
+	{
+		"ExchangeType": [ "binance-futures", "short" ],
+		"Currency": [ "BTC", "USDT" ],
+		"EnterPrice": [ 32100, 32300 ],
+		"EntryPrice": 32200,
+		"Targets": [
+			{
+				"Target": 31800,
+				"HitDate": "2021-02-21T06:35:43.092Z"
+			},
+			{
+				"Target": 31550,
+				"HitDate": "2021-04-28T01:08:48.107Z"
+			},
+			{
+				"Target": 31200,
+				"HitDate": "2021-03-05T06:08:32.497Z"
+			},
+			{
+				"Target": 30900,
+				"HitDate": "2021-09-04T01:37:27.314Z"
+			},
+			{
+				"Target": 30600,
+				"HitDate": "2021-09-04T01:37:27.314Z"
+			}
+		],
+		"SignalDate": "2021-10-01T08:19:43.997Z",
+		"ChatID": "rsf-00001",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "5", "8" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "32800"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "short" ],
+		"Currency": [ "BTC", "USDT" ],
+		"EnterPrice": [ 37200, 36900 ],
+		"EntryPrice": 37000,
+		"Targets": [
+			{
+				"Target": 36501,
+				"HitDate": "2021-02-21T06:35:43.092Z"
+			},
+			{
+				"Target": 35600,
+				"HitDate": "2021-04-28T01:08:48.107Z"
+			},
+			{
+				"Target": 34510,
+				"HitDate": "2021-03-05T06:08:32.497Z"
+			},
+			{
+				"Target": 33911,
+				"HitDate": "2021-09-04T01:37:27.314Z"
+			},
+			{
+				"Target": 33450,
+				"HitDate": "not-hit"
+			}
+		],
+		"SignalDate": "2021-10-01T08:19:43.997Z",
+		"ChatID": "rsf-00002",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "5", "8" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "38099"
+		},
+		"PositionStatus": "stoploss"
+	}
+]
