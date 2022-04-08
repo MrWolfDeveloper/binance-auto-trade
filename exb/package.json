@@ -1,0 +1,30 @@
+{
+  "name": "exb-analysis",
+  "version": "1.0.0",
+  "description": "EXB Analysis application created for analysis telegram channel signal & trade.",
+  "main": "app/exb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "analysis"
+  ],
+  "author": "MrWolf",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^6.17.7",
+    "@sentry/tracing": "^6.17.7",
+    "bignumber.js": "^9.0.1",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "json-bigint": "^1.0.0",
+    "mongoose": "^5.12.9",
+    "node-binance-api": "^0.12.5",
+    "node-watch": "^0.7.1",
+    "proxy-check": "^1.0.8",
+    "request": "^2.88.2",
+    "websocket": "^1.0.34",
+    "ws": "^7.5.6"
+  }
+}
