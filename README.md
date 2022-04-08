@@ -1,4 +1,4 @@
-# Dedicated EXB
+# EXB Dedicated
 
 A dedicated version for special customers
 
