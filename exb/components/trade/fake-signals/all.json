@@ -1,0 +1,2676 @@
+[
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 305, 405 ],
+		"EntryPrice": 355,
+		"Targets": [
+			{
+				"Target": 333,
+				"HitDate": "2021-02-21T06:35:43.092Z"
+			},
+			{
+				"Target": 335,
+				"HitDate": "2021-04-28T01:08:48.107Z"
+			},
+			{
+				"Target": 337,
+				"HitDate": "2021-03-05T06:08:32.497Z"
+			},
+			{
+				"Target": 339,
+				"HitDate": "2021-09-04T01:37:27.314Z"
+			},
+			{
+				"Target": 340,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-01T08:19:43.997Z",
+		"ChatID": "rsf-22",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2", "5" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "310"
+		},
+		"ForceStop": {
+			"ClosePrice": 344,
+			"CloseDate": "2021-01-27T06:16:03.138Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "FTT", "USDT" ],
+		"EnterPrice": [ 49, 53.6 ],
+		"EntryPrice": 51.3,
+		"Targets": [
+			{
+				"Target": 55.9,
+				"HitDate": "2021-08-07T21:35:45.827Z"
+			},
+			{
+				"Target": 58.8,
+				"HitDate": "2021-01-03T16:36:53.693Z"
+			},
+			{
+				"Target": 63,
+				"HitDate": "2021-08-09T13:49:53.938Z"
+			},
+			{
+				"Target": 69,
+				"HitDate": "2021-02-09T01:31:55.736Z"
+			},
+			{
+				"Target": 79,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 90,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 140,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-01T08:19:43.998Z",
+		"ChatID": "rsf-23",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "44"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-03-31T04:11:12.616Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "TLM", "USDT" ],
+		"EnterPrice": [ 0.174, 0.1775 ],
+		"EntryPrice": 0.17575,
+		"Targets": [
+			{
+				"Target": 0.1848,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.1991,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.2114,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.24,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.29,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-01T08:26:26.668Z",
+		"ChatID": "rsf-24",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.15"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "AVAX", "USDT" ],
+		"EnterPrice": [ 66, 69 ],
+		"EntryPrice": 67.5,
+		"Targets": [
+			{
+				"Target": 76,
+				"HitDate": "2021-09-17T20:20:37.534Z"
+			},
+			{
+				"Target": 88,
+				"HitDate": "2021-01-20T01:32:30.260Z"
+			},
+			{
+				"Target": 97,
+				"HitDate": "2021-05-31T07:48:11.543Z"
+			},
+			{
+				"Target": 102,
+				"HitDate": "2021-06-27T20:50:52.919Z"
+			},
+			{
+				"Target": 188,
+				"HitDate": "2021-01-05T09:57:52.417Z"
+			}
+		],
+		"SignalDate": "2021-10-01T12:22:09.913Z",
+		"ChatID": "rsf-25",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "59.91"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-01-09T20:55:12.609Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ALGO", "USDT" ],
+		"EnterPrice": [ 1.8, 1.83 ],
+		"EntryPrice": 1.815,
+		"Targets": [
+			{
+				"Target": 1.95,
+				"HitDate": "2021-03-14T05:41:01.611Z"
+			},
+			{
+				"Target": 2.15,
+				"HitDate": "2021-09-05T21:45:14.871Z"
+			},
+			{
+				"Target": 2.37,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.6,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 3.3,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-02T14:06:54.967Z",
+		"ChatID": "rsf-27",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "1.45"
+		},
+		"ForceStop": {
+			"ClosePrice": 1,
+			"CloseDate": "2021-05-06T01:17:49.468Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "SOL", "USDT" ],
+		"EnterPrice": [ 142, 147 ],
+		"EntryPrice": 144.5,
+		"Targets": [
+			{
+				"Target": 154,
+				"HitDate": "2021-08-17T16:27:54.480Z"
+			},
+			{
+				"Target": 168,
+				"HitDate": "2021-09-23T02:17:44.770Z"
+			},
+			{
+				"Target": 177,
+				"HitDate": "2021-02-15T14:21:35.952Z"
+			},
+			{
+				"Target": 193,
+				"HitDate": "2021-03-08T12:33:43.191Z"
+			},
+			{
+				"Target": null,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 240,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-02T16:35:59.521Z",
+		"ChatID": "rs-5333",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "115"
+		},
+		"ForceStop": {
+			"ClosePrice": 145,
+			"CloseDate": "2021-10-26T17:35:29.438Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BNB", "USDT" ],
+		"EnterPrice": [ 430, 440 ],
+		"EntryPrice": 435,
+		"Targets": [
+			{
+				"Target": 437.5,
+				"HitDate": "2021-03-13T15:25:02.084Z"
+			},
+			{
+				"Target": 438.5,
+				"HitDate": "2021-02-18T07:40:09.638Z"
+			},
+			{
+				"Target": 439.5,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 440,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-02T21:41:27.813Z",
+		"ChatID": "rsf-29",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "425"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-10-25T15:06:14.774Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 350, 370 ],
+		"EntryPrice": 360,
+		"Targets": [
+			{
+				"Target": 361,
+				"HitDate": "2021-02-16T14:17:32.594Z"
+			},
+			{
+				"Target": 362,
+				"HitDate": "2021-06-16T07:25:51.682Z"
+			},
+			{
+				"Target": 363,
+				"HitDate": "2021-09-29T06:40:37.361Z"
+			},
+			{
+				"Target": 364,
+				"HitDate": "2021-02-08T11:34:31.359Z"
+			}
+		],
+		"SignalDate": "2021-10-02T22:06:45.725Z",
+		"ChatID": "rsf-30",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "350"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 302, 428 ],
+		"EntryPrice": 365,
+		"Targets": [
+			{
+				"Target": 360,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 361,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 362,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-02T22:44:22.399Z",
+		"ChatID": "rsf-31",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "349"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 306, 399 ],
+		"EntryPrice": 352.5,
+		"Targets": [
+			{
+				"Target": 360,
+				"HitDate": "2021-07-01T02:24:54.408Z"
+			},
+			{
+				"Target": 361,
+				"HitDate": "2021-05-05T17:32:08.116Z"
+			},
+			{
+				"Target": 362,
+				"HitDate": "2021-04-08T18:25:43.127Z"
+			}
+		],
+		"SignalDate": "2021-10-02T22:48:37.475Z",
+		"ChatID": "rsf-32",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "350"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ONE", "USDT" ],
+		"EnterPrice": [ 0.17, 0.173 ],
+		"EntryPrice": 0.17149999999999999,
+		"Targets": [
+			{
+				"Target": 0.183,
+				"HitDate": "2021-01-10T20:38:25.283Z"
+			},
+			{
+				"Target": 0.1944,
+				"HitDate": "2021-09-09T10:22:09.775Z"
+			},
+			{
+				"Target": 0.2177,
+				"HitDate": "2021-02-09T09:33:14.942Z"
+			},
+			{
+				"Target": 0.239,
+				"HitDate": "2021-04-04T07:09:35.342Z"
+			},
+			{
+				"Target": 0.27,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.3333,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-03T11:35:07.978Z",
+		"ChatID": "rs-5377",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.1600"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-08-18T10:12:18.907Z"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ONE", "USDT" ],
+		"EnterPrice": [ 0.17, 0.173 ],
+		"EntryPrice": 0.17149999999999999,
+		"Targets": [
+			{
+				"Target": 0.183,
+				"HitDate": "2021-09-03T09:57:16.205Z"
+			},
+			{
+				"Target": 0.1944,
+				"HitDate": "2021-02-23T00:28:09.494Z"
+			},
+			{
+				"Target": 0.2177,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.239,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.27,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.3333,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-03T13:44:41.981Z",
+		"ChatID": "rs-5378",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.1600"
+		},
+		"PositionStatus": "target-1"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "DYDX", "USDT" ],
+		"EnterPrice": [ 22.1, 22.4 ],
+		"EntryPrice": 22.25,
+		"Targets": [
+			{
+				"Target": 23.9,
+				"HitDate": "2021-07-14T11:23:09.748Z"
+			},
+			{
+				"Target": 24.6,
+				"HitDate": "2021-04-11T16:55:06.138Z"
+			},
+			{
+				"Target": 25.4,
+				"HitDate": "2021-04-14T14:42:28.996Z"
+			},
+			{
+				"Target": 27,
+				"HitDate": "2021-10-21T20:31:33.179Z"
+			},
+			{
+				"Target": 29,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 33,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-03T21:06:17.427Z",
+		"ChatID": "rs-5384",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "21.2"
+		},
+		"ForceStop": {
+			"ClosePrice": 22,
+			"CloseDate": "2021-02-07T11:15:56.680Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "DOGE", "USDT" ],
+		"EnterPrice": [ 0.22, 0.248 ],
+		"EntryPrice": 0.23399999999999999,
+		"Targets": [
+			{
+				"Target": 0.279,
+				"HitDate": "2021-07-22T15:30:34.564Z"
+			},
+			{
+				"Target": 0.319,
+				"HitDate": "2021-03-09T17:00:04.024Z"
+			},
+			{
+				"Target": 0.358,
+				"HitDate": "2021-06-06T07:57:12.145Z"
+			},
+			{
+				"Target": 0.3993,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.4994,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-06T01:09:58.064Z",
+		"ChatID": "rs-5399",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.1900"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-06-22T16:54:36.808Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "DOGE", "USDT" ],
+		"EnterPrice": [ 0.22, 0.248 ],
+		"EntryPrice": 0.23399999999999999,
+		"Targets": [
+			{
+				"Target": 0.279,
+				"HitDate": "2021-04-23T16:58:28.490Z"
+			},
+			{
+				"Target": 0.319,
+				"HitDate": "2021-03-19T06:35:00.382Z"
+			},
+			{
+				"Target": 0.358,
+				"HitDate": "2021-04-21T01:17:44.420Z"
+			},
+			{
+				"Target": 0.3993,
+				"HitDate": "2021-09-29T09:55:30.991Z"
+			},
+			{
+				"Target": 0.4994,
+				"HitDate": "2021-09-29T19:42:10.644Z"
+			}
+		],
+		"SignalDate": "2021-10-06T09:46:01.690Z",
+		"ChatID": "rsf-33",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.1900"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "DOT", "USDT" ],
+		"EnterPrice": [ 30, 32 ],
+		"EntryPrice": 31,
+		"Targets": [
+			{
+				"Target": 33.9,
+				"HitDate": "2021-06-25T07:28:57.497Z"
+			},
+			{
+				"Target": 34.9,
+				"HitDate": "2021-03-09T05:18:18.154Z"
+			},
+			{
+				"Target": 37,
+				"HitDate": "2021-01-15T15:47:46.833Z"
+			},
+			{
+				"Target": 40.9,
+				"HitDate": "2021-08-19T04:49:12.320Z"
+			},
+			{
+				"Target": 46,
+				"HitDate": "2021-03-12T23:52:04.196Z"
+			},
+			{
+				"Target": 53,
+				"HitDate": "2021-01-15T22:09:52.781Z"
+			}
+		],
+		"SignalDate": "2021-10-07T07:25:51.117Z",
+		"ChatID": "rs-5408",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "25.6"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ADA", "USDT" ],
+		"EnterPrice": [ 2.25, 2.27 ],
+		"EntryPrice": 2.26,
+		"Targets": [
+			{
+				"Target": 2.34,
+				"HitDate": "2021-10-07T04:47:09.073Z"
+			},
+			{
+				"Target": 2.47,
+				"HitDate": "2021-02-07T07:00:00.108Z"
+			},
+			{
+				"Target": 2.77,
+				"HitDate": "2021-02-10T02:41:54.726Z"
+			},
+			{
+				"Target": 2.98,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 3.33,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-07T16:19:37.399Z",
+		"ChatID": "rs-5412",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "2.18"
+		},
+		"PositionStatus": "target-2"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ICP", "USDT" ],
+		"EnterPrice": [ 50, 55 ],
+		"EntryPrice": 52.5,
+		"Targets": [
+			{
+				"Target": 51.97,
+				"HitDate": "2021-06-03T16:12:49.567Z"
+			},
+			{
+				"Target": 52.97,
+				"HitDate": "2021-02-27T16:18:03.097Z"
+			},
+			{
+				"Target": 53.97,
+				"HitDate": "2021-03-17T22:10:26.660Z"
+			}
+		],
+		"SignalDate": "2021-10-08T13:52:06.905Z",
+		"ChatID": "rsf-34",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "5", "10" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "49.97"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "IOTA", "USDT" ],
+		"EnterPrice": [ 1.31, 1.345 ],
+		"EntryPrice": 1.3275000000000001,
+		"Targets": [
+			{
+				"Target": 1.39,
+				"HitDate": "2021-05-20T18:14:53.869Z"
+			},
+			{
+				"Target": 1.44,
+				"HitDate": "2021-08-05T12:14:45.338Z"
+			},
+			{
+				"Target": 1.49,
+				"HitDate": "2021-07-09T21:29:24.499Z"
+			},
+			{
+				"Target": 1.66,
+				"HitDate": "2021-08-03T15:04:49.526Z"
+			},
+			{
+				"Target": 1.89,
+				"HitDate": "2021-02-19T21:24:32.311Z"
+			}
+		],
+		"SignalDate": "2021-10-09T12:49:06.124Z",
+		"ChatID": "rs-5426",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3", "5" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "1.2849"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ETH", "USDT" ],
+		"EnterPrice": [ 3500, 4000 ],
+		"EntryPrice": 3750,
+		"Targets": [
+			{
+				"Target": 3584,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 3589,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 3600,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-09T21:01:16.526Z",
+		"ChatID": "rsf-35",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "3560"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "SOL", "USDT" ],
+		"EnterPrice": [ 150, 180 ],
+		"EntryPrice": 165,
+		"Targets": [
+			{
+				"Target": 159,
+				"HitDate": "2021-06-23T21:59:31.967Z"
+			},
+			{
+				"Target": 163,
+				"HitDate": "2021-08-26T20:42:54.513Z"
+			},
+			{
+				"Target": 167,
+				"HitDate": "2021-03-15T17:47:32.196Z"
+			},
+			{
+				"Target": 170,
+				"HitDate": "2021-07-27T19:50:59.701Z"
+			}
+		],
+		"SignalDate": "2021-10-09T21:45:59.607Z",
+		"ChatID": "rsf-36",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "153"
+		},
+		"ForceStop": {
+			"ClosePrice": 152,
+			"CloseDate": "2021-07-11T06:53:36.624Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "THETA", "USDT" ],
+		"EnterPrice": [ 6.5, 6.95 ],
+		"EntryPrice": 6.725,
+		"Targets": [
+			{
+				"Target": 7.14,
+				"HitDate": "2021-10-13T14:05:34.859Z"
+			},
+			{
+				"Target": 7.44,
+				"HitDate": "2021-01-26T20:16:24.697Z"
+			},
+			{
+				"Target": 7.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 8.55,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 9.66,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 11,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-09T23:01:50.928Z",
+		"ChatID": "rs-5427",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "5.48"
+		},
+		"ForceStop": {
+			"ClosePrice": 6,
+			"CloseDate": "2021-02-07T15:57:34.108Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "THETA", "USDT" ],
+		"EnterPrice": [ 6.5, 6.99 ],
+		"EntryPrice": 6.745,
+		"Targets": [
+			{
+				"Target": 7.14,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 7.44,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 7.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 8.55,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 9.66,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 11,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-09T23:20:46.221Z",
+		"ChatID": "rsf-37",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "5.48"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "DGB", "USDT" ],
+		"EnterPrice": [ 0.052, 0.0525 ],
+		"EntryPrice": 0.05225,
+		"Targets": [
+			{
+				"Target": 0.05334,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.05491,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.05703,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.05999,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.06666,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-10T09:34:01.425Z",
+		"ChatID": "rs-5431",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3", "5" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.05100"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "OMG", "USDT" ],
+		"EnterPrice": [ 13.5, 14.6 ],
+		"EntryPrice": 14.05,
+		"Targets": [
+			{
+				"Target": 15.6,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 16.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 17.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 19,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 22.9,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-11T07:59:08.307Z",
+		"ChatID": "rs-5441",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "12.6"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "RAY", "USDT" ],
+		"EnterPrice": [ 9.5, 9.65 ],
+		"EntryPrice": 9.575,
+		"Targets": [
+			{
+				"Target": 9.95,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 10.19,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 10.49,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 10.99,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 14,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 16,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T10:39:08.304Z",
+		"ChatID": "rs-5465",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "8.78"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 350, 270 ],
+		"EntryPrice": 310,
+		"Targets": [
+			{
+				"Target": 361.3,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 362,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 363,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T22:12:33.635Z",
+		"ChatID": "rsf-38",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "250"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 330, 380 ],
+		"EntryPrice": 355,
+		"Targets": [
+			{
+				"Target": 363,
+				"HitDate": "2021-06-05T02:30:46.441Z"
+			},
+			{
+				"Target": 364,
+				"HitDate": "2021-06-09T13:36:24.899Z"
+			},
+			{
+				"Target": 365,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T22:15:13.930Z",
+		"ChatID": "rsf-39",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "350"
+		},
+		"ForceStop": {
+			"ClosePrice": 340,
+			"CloseDate": "2021-10-21T10:20:57.975Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 330, 370 ],
+		"EntryPrice": 350,
+		"Targets": [
+			{
+				"Target": 361,
+				"HitDate": "2021-05-27T15:12:06.857Z"
+			},
+			{
+				"Target": 362,
+				"HitDate": "2021-08-19T08:04:05.901Z"
+			},
+			{
+				"Target": 364,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T22:46:50.338Z",
+		"ChatID": "rsf-40",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2", "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "350"
+		},
+		"PositionStatus": "target-1"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 300, 390 ],
+		"EntryPrice": 345,
+		"Targets": [
+			{
+				"Target": 365.5,
+				"HitDate": "2021-03-31T20:09:53.167Z"
+			},
+			{
+				"Target": 366.5,
+				"HitDate": "2021-02-15T22:42:56.500Z"
+			},
+			{
+				"Target": 367.5,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T23:01:25.052Z",
+		"ChatID": "rsf-41",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2", "5" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "358"
+		},
+		"ForceStop": {
+			"ClosePrice": 331,
+			"CloseDate": "2021-04-05T05:18:54.381Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "HBAR", "USDT" ],
+		"EnterPrice": [ 0.35, 0.357 ],
+		"EntryPrice": 0.3535,
+		"Targets": [
+			{
+				"Target": 0.364,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.379,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.393,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.418,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.444,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-13T23:28:07.323Z",
+		"ChatID": "rs-5470",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.340"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ALICE", "USDT" ],
+		"EnterPrice": [ 11, 12.15 ],
+		"EntryPrice": 11.575,
+		"Targets": [
+			{
+				"Target": 13.31,
+				"HitDate": "2021-04-26T06:44:13.084Z"
+			},
+			{
+				"Target": 14.9,
+				"HitDate": "2021-03-25T06:15:29.337Z"
+			},
+			{
+				"Target": 17.7,
+				"HitDate": "2021-02-23T18:01:15.581Z"
+			},
+			{
+				"Target": 22.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 29,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-14T08:30:19.623Z",
+		"ChatID": "rs-5472",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "8.66"
+		},
+		"ForceStop": {
+			"ClosePrice": 12,
+			"CloseDate": "2021-04-19T04:03:39.214Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "AXS", "USDT" ],
+		"EnterPrice": [ 120.2, 122.5 ],
+		"EntryPrice": 121.35,
+		"Targets": [
+			{
+				"Target": 124,
+				"HitDate": "2021-05-04T04:11:53.972Z"
+			},
+			{
+				"Target": 127,
+				"HitDate": "2021-01-08T06:57:55.996Z"
+			},
+			{
+				"Target": 133,
+				"HitDate": "2021-10-04T11:49:47.354Z"
+			},
+			{
+				"Target": 139,
+				"HitDate": "2021-04-12T13:46:06.496Z"
+			},
+			{
+				"Target": 166,
+				"HitDate": "2021-06-02T00:27:00.035Z"
+			},
+			{
+				"Target": 189,
+				"HitDate": "2021-06-25T13:39:46.929Z"
+			}
+		],
+		"SignalDate": "2021-10-14T09:10:39.532Z",
+		"ChatID": "rs-5474",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "118.9"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "XLM", "USDT" ],
+		"EnterPrice": [ 0.37, 0.38 ],
+		"EntryPrice": 0.375,
+		"Targets": [
+			{
+				"Target": 0.419,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.458,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.4994,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.5499,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.8383,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.9091,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 1.2599,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-14T11:09:04.107Z",
+		"ChatID": "rs-5476",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.35"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BETA", "USDT" ],
+		"EnterPrice": [ 2.4, 2.45 ],
+		"EntryPrice": 2.425,
+		"Targets": [
+			{
+				"Target": 2.53,
+				"HitDate": "2021-06-17T03:21:22.312Z"
+			},
+			{
+				"Target": 2.61,
+				"HitDate": "2021-08-12T12:33:14.403Z"
+			},
+			{
+				"Target": 2.82,
+				"HitDate": "2021-03-17T05:28:46.678Z"
+			},
+			{
+				"Target": 2.99,
+				"HitDate": "2021-06-14T19:41:05.431Z"
+			},
+			{
+				"Target": 3.9,
+				"HitDate": "2021-09-02T21:36:19.110Z"
+			}
+		],
+		"SignalDate": "2021-10-14T14:17:02.425Z",
+		"ChatID": "rs-5481",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "2.24"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "UNI", "USDT" ],
+		"EnterPrice": [ 24, 25.75 ],
+		"EntryPrice": 24.875,
+		"Targets": [
+			{
+				"Target": 26.88,
+				"HitDate": "2021-07-03T23:21:32.236Z"
+			},
+			{
+				"Target": 28.63,
+				"HitDate": "2021-06-10T19:41:47.548Z"
+			},
+			{
+				"Target": 31.88,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 35.49,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 44.99,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 59,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-15T13:53:58.479Z",
+		"ChatID": "rs-5491",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "19.85"
+		},
+		"ForceStop": {
+			"ClosePrice": 25,
+			"CloseDate": "2021-03-05T05:19:44.888Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "GRT", "USDT" ],
+		"EnterPrice": [ 0.82, 0.862 ],
+		"EntryPrice": 0.841,
+		"Targets": [
+			{
+				"Target": 0.8998,
+				"HitDate": "2021-05-31T21:15:04.183Z"
+			},
+			{
+				"Target": 0.9292,
+				"HitDate": "2021-07-26T09:48:52.859Z"
+			},
+			{
+				"Target": 0.9999,
+				"HitDate": "2021-07-25T08:57:51.049Z"
+			},
+			{
+				"Target": 1.099,
+				"HitDate": "2021-08-04T14:34:13.109Z"
+			},
+			{
+				"Target": 1.23,
+				"HitDate": "2021-05-05T22:33:09.134Z"
+			}
+		],
+		"SignalDate": "2021-10-16T06:30:59.833Z",
+		"ChatID": "rs-5493",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.7000"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "NEAR", "USDT" ],
+		"EnterPrice": [ 8, 8.1 ],
+		"EntryPrice": 8.05,
+		"Targets": [
+			{
+				"Target": 8.33,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 8.49,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 8.8,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 9.19,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 9.59,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-16T08:42:03.686Z",
+		"ChatID": "rs-5494",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "7.74"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "FTT", "USDT" ],
+		"EnterPrice": [ 56, 57.3 ],
+		"EntryPrice": 56.65,
+		"Targets": [
+			{
+				"Target": 59.9,
+				"HitDate": "2021-04-22T03:59:39.071Z"
+			},
+			{
+				"Target": 63.9,
+				"HitDate": "2021-05-09T20:10:11.526Z"
+			},
+			{
+				"Target": 67,
+				"HitDate": "2021-03-31T19:18:31.937Z"
+			},
+			{
+				"Target": 71,
+				"HitDate": "2021-07-12T03:54:46.671Z"
+			},
+			{
+				"Target": 75,
+				"HitDate": "2021-02-22T18:42:58.505Z"
+			},
+			{
+				"Target": 99,
+				"HitDate": "2021-01-20T06:02:56.494Z"
+			}
+		],
+		"SignalDate": "2021-10-16T08:57:12.899Z",
+		"ChatID": "rs-5495",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "53"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "CAKE", "USDT" ],
+		"EnterPrice": [ 19.8, 20.4 ],
+		"EntryPrice": 20.1,
+		"Targets": [
+			{
+				"Target": 21.3,
+				"HitDate": "2021-02-01T01:02:37.178Z"
+			},
+			{
+				"Target": 23.9,
+				"HitDate": "2021-07-24T14:45:20.543Z"
+			},
+			{
+				"Target": 25.8,
+				"HitDate": "2021-01-07T13:41:15.155Z"
+			},
+			{
+				"Target": 29,
+				"HitDate": "2021-05-15T09:55:54.913Z"
+			},
+			{
+				"Target": 34.1,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-19T12:30:47.085Z",
+		"ChatID": "rs-5522",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "18"
+		},
+		"ForceStop": {
+			"ClosePrice": 20,
+			"CloseDate": "2021-09-25T07:40:08.410Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "CAKE", "USDT" ],
+		"EnterPrice": [ 19.4, 20.6 ],
+		"EntryPrice": 20,
+		"Targets": [
+			{
+				"Target": 21.3,
+				"HitDate": "2021-06-05T21:42:04.855Z"
+			},
+			{
+				"Target": 23.9,
+				"HitDate": "2021-10-22T02:21:16.235Z"
+			},
+			{
+				"Target": 25.8,
+				"HitDate": "2021-04-05T20:02:57.305Z"
+			},
+			{
+				"Target": 29,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 34.1,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-19T13:22:44.885Z",
+		"ChatID": "rsf-43",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "18"
+		},
+		"PositionStatus": "target-2"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ALGO", "USDT" ],
+		"EnterPrice": [ 1.75, 1.85 ],
+		"EntryPrice": 1.8,
+		"Targets": [
+			{
+				"Target": 1.96,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.06,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.22,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.35,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 2.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 3.3,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-21T09:56:28.319Z",
+		"ChatID": "rs-5538",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "1.68"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "XRP", "BTC" ],
+		"EnterPrice": [ 0.0000177, 0.0000179 ],
+		"EntryPrice": 0.0000178,
+		"Targets": [
+			{
+				"Target": 0.0000184,
+				"HitDate": "2021-03-02T20:24:36.276Z"
+			},
+			{
+				"Target": 0.000019,
+				"HitDate": "2021-01-01T18:05:46.539Z"
+			},
+			{
+				"Target": 0.0000197,
+				"HitDate": "2021-09-02T10:50:28.571Z"
+			},
+			{
+				"Target": 0.0000204,
+				"HitDate": "2021-04-19T04:00:53.377Z"
+			},
+			{
+				"Target": 0.0000214,
+				"HitDate": "2021-09-28T10:18:52.921Z"
+			},
+			{
+				"Target": 0.000023,
+				"HitDate": "2021-02-03T14:38:19.624Z"
+			}
+		],
+		"SignalDate": "2021-10-24T09:54:45.015Z",
+		"ChatID": "rs-5553",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.00001740"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ETH", "USDT" ],
+		"EnterPrice": [ 4070, 4100 ],
+		"EntryPrice": 4085,
+		"Targets": [
+			{
+				"Target": 4150,
+				"HitDate": "2021-08-16T21:04:49.185Z"
+			},
+			{
+				"Target": 4220,
+				"HitDate": "2021-02-09T16:04:56.095Z"
+			},
+			{
+				"Target": 4360,
+				"HitDate": "2021-09-26T07:40:22.751Z"
+			},
+			{
+				"Target": 4450,
+				"HitDate": "2021-08-17T09:09:36.218Z"
+			},
+			{
+				"Target": 4590,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-24T10:01:24.556Z",
+		"ChatID": "rs-5554",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "2", "4" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "4035"
+		},
+		"PositionStatus": "target-3"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ALICE", "USDT" ],
+		"EnterPrice": [ 12.2, 12.4 ],
+		"EntryPrice": 12.3,
+		"Targets": [
+			{
+				"Target": 13.31,
+				"HitDate": "2021-02-11T12:05:09.106Z"
+			},
+			{
+				"Target": 14.9,
+				"HitDate": "2021-10-09T10:01:28.852Z"
+			},
+			{
+				"Target": 17.7,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 22.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 29,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-25T13:05:01.048Z",
+		"ChatID": "rs-5569",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "11.11"
+		},
+		"ForceStop": {
+			"ClosePrice": 12,
+			"CloseDate": "2021-03-20T04:14:04.136Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ATOM", "USDT" ],
+		"EnterPrice": [ 30, 35.1 ],
+		"EntryPrice": 32.55,
+		"Targets": [
+			{
+				"Target": 38,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 43,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 54,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 63,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 69,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 88,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-25T14:32:31.285Z",
+		"ChatID": "rs-5570",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "27"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "C98", "USDT" ],
+		"EnterPrice": [ 4.25, 4.35 ],
+		"EntryPrice": 4.3,
+		"Targets": [
+			{
+				"Target": 4.8,
+				"HitDate": "2021-06-19T12:27:37.517Z"
+			},
+			{
+				"Target": 5.2,
+				"HitDate": "2021-02-05T10:58:06.653Z"
+			},
+			{
+				"Target": 5.8,
+				"HitDate": "2021-04-14T00:43:16.871Z"
+			},
+			{
+				"Target": 6.3,
+				"HitDate": "2021-04-03T22:47:33.787Z"
+			},
+			{
+				"Target": 7.6,
+				"HitDate": "2021-02-04T11:42:12.856Z"
+			},
+			{
+				"Target": 8.9,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-26T09:18:45.139Z",
+		"ChatID": "rs-5577",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "3.75"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-09-28T21:35:01.699Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "COTI", "USDT" ],
+		"EnterPrice": [ 0.55, 0.56 ],
+		"EntryPrice": 0.555,
+		"Targets": [
+			{
+				"Target": 0.583,
+				"HitDate": "2021-04-01T08:41:54.256Z"
+			},
+			{
+				"Target": 0.6161,
+				"HitDate": "2021-03-14T02:38:22.282Z"
+			},
+			{
+				"Target": 0.6549,
+				"HitDate": "2021-08-11T17:56:31.278Z"
+			},
+			{
+				"Target": 0.76,
+				"HitDate": "2021-10-19T13:24:54.147Z"
+			},
+			{
+				"Target": 0.85,
+				"HitDate": "2021-02-14T03:28:54.340Z"
+			}
+		],
+		"SignalDate": "2021-10-29T08:00:17.128Z",
+		"ChatID": "rs-5605",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "0.4940"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-03-26T05:36:35.478Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "CAKE", "USDT" ],
+		"EnterPrice": [ 19.8, 20.4 ],
+		"EntryPrice": 20.1,
+		"Targets": [
+			{
+				"Target": 21.3,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 23.9,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 25.8,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 29,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 34.1,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-29T20:49:47.206Z",
+		"ChatID": "rsf-42",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "18"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "NULS", "BTC" ],
+		"EnterPrice": [ 0.0000087, 0.0000095 ],
+		"EntryPrice": 0.000009100000000000001,
+		"Targets": [
+			{
+				"Target": 0.0000115,
+				"HitDate": "2021-03-12T13:11:11.962Z"
+			},
+			{
+				"Target": 0.0000145,
+				"HitDate": "2021-09-25T12:39:38.737Z"
+			},
+			{
+				"Target": 0.0000171,
+				"HitDate": "2021-09-20T19:02:12.379Z"
+			}
+		],
+		"SignalDate": "2021-10-29T20:49:47.206Z",
+		"ChatID": "rsf-44",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1w",
+			"Number": "0.00000850"
+		},
+		"ForceStop": {
+			"ClosePrice": 0,
+			"CloseDate": "2021-09-29T11:12:22.472Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "ETH", "USDT" ],
+		"EnterPrice": [ 4200, 4350 ],
+		"EntryPrice": 4275,
+		"Targets": [
+			{
+				"Target": 4691,
+				"HitDate": "2021-01-11T11:28:39.016Z"
+			},
+			{
+				"Target": 4989,
+				"HitDate": "2021-10-13T11:02:57.643Z"
+			},
+			{
+				"Target": 5345,
+				"HitDate": "2021-03-11T00:22:08.384Z"
+			},
+			{
+				"Target": 5790,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 6200,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-30T10:46:09.296Z",
+		"ChatID": "rs-5612",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "2" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "3800"
+		},
+		"ForceStop": {
+			"ClosePrice": 4298,
+			"CloseDate": "2021-07-14T20:44:41.632Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "DODO", "USDT" ],
+		"EnterPrice": [ 1.58, 1.66 ],
+		"EntryPrice": 1.62,
+		"Targets": [
+			{
+				"Target": 2.3,
+				"HitDate": "2021-06-17T21:32:40.274Z"
+			},
+			{
+				"Target": 2.8,
+				"HitDate": "2021-10-04T05:29:17.063Z"
+			},
+			{
+				"Target": 3.79,
+				"HitDate": "2021-05-30T16:59:10.179Z"
+			}
+		],
+		"SignalDate": "2021-10-30T18:19:13.219Z",
+		"ChatID": "rsf-45",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "1.296"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "DODO", "USDT" ],
+		"EnterPrice": [ 1.6, 1.8 ],
+		"EntryPrice": 1.7000000000000002,
+		"Targets": [
+			{
+				"Target": 2.2,
+				"HitDate": "2021-10-03T15:29:05.822Z"
+			},
+			{
+				"Target": 2.8,
+				"HitDate": "2021-08-21T20:47:34.042Z"
+			},
+			{
+				"Target": 3,
+				"HitDate": "2021-05-06T08:04:03.971Z"
+			}
+		],
+		"SignalDate": "2021-10-30T18:22:58.204Z",
+		"ChatID": "rsf-46",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3", "5" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "1296"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-08-17T21:17:00.092Z"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "LINA", "USDT" ],
+		"EnterPrice": [ 0.5, 0.55 ],
+		"EntryPrice": 0.525,
+		"Targets": [
+			{
+				"Target": 0.03,
+				"HitDate": "2021-03-26T02:56:47.219Z"
+			},
+			{
+				"Target": 0.058,
+				"HitDate": "2021-03-21T15:58:27.169Z"
+			},
+			{
+				"Target": 0.068,
+				"HitDate": "2021-03-12T19:03:27.224Z"
+			}
+		],
+		"SignalDate": "2021-10-30T18:51:18.213Z",
+		"ChatID": "rsf-47",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "2", "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.03985"
+		},
+		"ForceStop": {
+			"ClosePrice": 0,
+			"CloseDate": "2021-09-17T17:11:28.496Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "LINA", "USDT" ],
+		"EnterPrice": [ 0.049, 0.056 ],
+		"EntryPrice": 0.052500000000000005,
+		"Targets": [
+			{
+				"Target": 0.053,
+				"HitDate": "2021-03-10T14:42:44.264Z"
+			},
+			{
+				"Target": 0.059,
+				"HitDate": "2021-04-22T14:11:54.011Z"
+			},
+			{
+				"Target": 0.068,
+				"HitDate": "2021-07-09T18:32:16.176Z"
+			}
+		],
+		"SignalDate": "2021-10-30T18:53:56.850Z",
+		"ChatID": "rsf-48",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2", "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.03985"
+		},
+		"ForceStop": {
+			"ClosePrice": 0,
+			"CloseDate": "2021-03-08T08:18:07.970Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "FIL", "USDT" ],
+		"EnterPrice": [ 64, 66 ],
+		"EntryPrice": 65,
+		"Targets": [
+			{
+				"Target": 74,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 80,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 92,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 112,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 133,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 160,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-31T14:42:35.028Z",
+		"ChatID": "rs-5620",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "48"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "COS", "BTC" ],
+		"EnterPrice": [ 3.2e-7, 3.5e-7 ],
+		"EntryPrice": 3.3499999999999997e-7,
+		"Targets": [
+			{
+				"Target": 4.3e-7,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 5.1e-7,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 5.7e-7,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 6.4e-7,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-10-31T14:49:31.127Z",
+		"ChatID": "rsf-49",
+		"Capital": {
+			"Percentage": "2"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "0.00000030"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BTT", "USDT" ],
+		"EnterPrice": [ 0.00385, 0.004 ],
+		"EntryPrice": 0.003925,
+		"Targets": [
+			{
+				"Target": 0.0044,
+				"HitDate": "2021-10-29T01:15:32.671Z"
+			},
+			{
+				"Target": 0.0048,
+				"HitDate": "2021-04-19T05:18:04.271Z"
+			},
+			{
+				"Target": 0.0052,
+				"HitDate": "2021-08-16T17:00:01.352Z"
+			},
+			{
+				"Target": 0.006,
+				"HitDate": "2021-08-03T04:18:11.834Z"
+			},
+			{
+				"Target": 0.0078,
+				"HitDate": "2021-09-30T01:47:11.245Z"
+			},
+			{
+				"Target": 0.01,
+				"HitDate": "2021-08-05T13:46:42.256Z"
+			}
+		],
+		"SignalDate": "2021-11-01T09:16:32.287Z",
+		"ChatID": "rs-5625",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "0.0036"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BETA", "BTC" ],
+		"EnterPrice": [ 0.0000295, 0.0000031 ],
+		"EntryPrice": 0.0000163,
+		"Targets": [
+			{
+				"Target": 0.0000387,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000455,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000511,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000573,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000698,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000813,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-11-01T09:43:59.892Z",
+		"ChatID": "rs-5627",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.0000245"
+		},
+		"PositionStatus": "open"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BETA", "BTC" ],
+		"EnterPrice": [ 0.0000295, 0.000031 ],
+		"EntryPrice": 0.00003025,
+		"Targets": [
+			{
+				"Target": 0.0000387,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000455,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000511,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000573,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000698,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.0000813,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-11-01T09:44:17.550Z",
+		"ChatID": "rs-5628",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.0000245"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "KSM", "USDT" ],
+		"EnterPrice": [ 400, 420 ],
+		"EntryPrice": 410,
+		"Targets": [
+			{
+				"Target": 408,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 412,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-11-01T22:59:19.257Z",
+		"ChatID": "rsf-50",
+		"Capital": {
+			"Percentage": "2",
+			"Leverage": "isolated",
+			"Range": [ "2", "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "390"
+		},
+		"PositionStatus": "opening"
+	},
+	{
+		"ExchangeType": [ "binance-futures", "long" ],
+		"Currency": [ "IOST", "USDT" ],
+		"EnterPrice": [ 0.056, 0.0577 ],
+		"EntryPrice": 0.05685,
+		"Targets": [
+			{
+				"Target": 0.0598,
+				"HitDate": "2021-03-16T03:10:21.747Z"
+			},
+			{
+				"Target": 0.0623,
+				"HitDate": "2021-10-28T14:01:07.451Z"
+			},
+			{
+				"Target": 0.0662,
+				"HitDate": "2021-08-29T19:19:13.745Z"
+			},
+			{
+				"Target": 0.0699,
+				"HitDate": "2021-02-19T23:53:40.959Z"
+			},
+			{
+				"Target": 0.07777,
+				"HitDate": "2021-04-01T08:39:04.878Z"
+			}
+		],
+		"SignalDate": "2021-11-02T08:29:53.506Z",
+		"ChatID": "rs-5372",
+		"Capital": {
+			"Percentage": "3",
+			"Leverage": "isolated",
+			"Range": [ "3" ]
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.05500"
+		},
+		"PositionStatus": "target-4"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "NEO", "USDT" ],
+		"EnterPrice": [ 46, 47 ],
+		"EntryPrice": 46.5,
+		"Targets": [
+			{
+				"Target": 49.4,
+				"HitDate": "2021-07-02T22:26:19.867Z"
+			},
+			{
+				"Target": 54,
+				"HitDate": "2021-02-14T22:16:57.951Z"
+			},
+			{
+				"Target": 59,
+				"HitDate": "2021-11-03T22:32:35.630Z"
+			},
+			{
+				"Target": 71,
+				"HitDate": "2021-03-30T13:13:57.419Z"
+			},
+			{
+				"Target": 86,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 99,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-11-02T09:50:54.517Z",
+		"ChatID": "rs-5632",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "40"
+		},
+		"ForceStop": {
+			"ClosePrice": 46,
+			"CloseDate": "2021-04-22T04:14:02.359Z"
+		},
+		"PositionStatus": "forcestop"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "BEL", "BTC" ],
+		"EnterPrice": [ 0.00004, 0.0000435 ],
+		"EntryPrice": 0.00004175,
+		"Targets": [
+			{
+				"Target": 0.0000473,
+				"HitDate": "2021-05-27T10:49:18.484Z"
+			},
+			{
+				"Target": 0.00005347,
+				"HitDate": "2021-07-13T10:06:49.441Z"
+			},
+			{
+				"Target": 0.00006184,
+				"HitDate": "2021-06-24T07:18:16.475Z"
+			},
+			{
+				"Target": 0.00007396,
+				"HitDate": "2021-10-12T03:41:28.778Z"
+			},
+			{
+				"Target": 0.00008448,
+				"HitDate": "2021-04-13T22:59:44.729Z"
+			},
+			{
+				"Target": 0.0001044,
+				"HitDate": "2021-03-12T11:14:11.169Z"
+			}
+		],
+		"SignalDate": "2021-11-02T19:26:00.270Z",
+		"ChatID": "rs-5635",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "below",
+			"Type": "manual",
+			"CandleInterval": "1d",
+			"Number": "0.00003400"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-03-28T20:08:48.416Z"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "ETC", "USDT" ],
+		"EnterPrice": [ 56, 57 ],
+		"EntryPrice": 56.5,
+		"Targets": [
+			{
+				"Target": 60,
+				"HitDate": "2021-09-03T12:11:30.995Z"
+			},
+			{
+				"Target": 68,
+				"HitDate": "2021-03-09T18:47:43.597Z"
+			},
+			{
+				"Target": 77,
+				"HitDate": "2021-04-30T14:18:51.130Z"
+			},
+			{
+				"Target": 90,
+				"HitDate": "2021-06-30T08:50:15.117Z"
+			},
+			{
+				"Target": 110,
+				"HitDate": "2021-10-11T09:37:17.796Z"
+			}
+		],
+		"SignalDate": "2021-11-03T10:16:49.565Z",
+		"ChatID": "rs-5647",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "47"
+		},
+		"PositionStatus": "take_profit"
+	},
+	{
+		"ExchangeType": [ "binance-spot" ],
+		"Currency": [ "VET", "USDT" ],
+		"EnterPrice": [ 0.14, 0.144 ],
+		"EntryPrice": 0.14200000000000002,
+		"Targets": [
+			{
+				"Target": 0.1551,
+				"HitDate": "2021-05-09T14:30:24.060Z"
+			},
+			{
+				"Target": 0.1717,
+				"HitDate": "2021-05-04T00:24:59.251Z"
+			},
+			{
+				"Target": 0.1953,
+				"HitDate": "not-set"
+			},
+			{
+				"Target": 0.2116,
+				"HitDate": "not-set"
+			}
+		],
+		"SignalDate": "2021-11-04T10:31:51.670Z",
+		"ChatID": "rs-5654",
+		"Capital": {
+			"Percentage": "3"
+		},
+		"StopLoss": {
+			"CandleSide": "above",
+			"Type": "normal",
+			"Number": "0.1241"
+		},
+		"PositionStatus": "stoploss",
+		"StopLossHitDate": "2021-06-17T16:34:07.733Z"
+	}
+]
