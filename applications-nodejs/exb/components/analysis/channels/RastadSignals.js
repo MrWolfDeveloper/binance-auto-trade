@@ -117,7 +117,7 @@ RastadSignals = {
 						var StopLossPrecision = RastadSignals.Precision(ExchangeType[0], Currency, StopLossOBJ.Number);
 
 						// StopLossOBJ.Number = StopLossOBJ.Number * ReductionCoefficient;
-						StopLossOBJ.Number = StopLossOBJ.Number.toFixed(StopLossPrecision);
+						StopLossOBJ.Number = parseFloat(StopLossOBJ.Number).toFixed(StopLossPrecision);
 					}
 
 					if (OpenTargets) {
@@ -141,7 +141,7 @@ RastadSignals = {
 						// Change Target number before insert
 						TargetNumber = TargetNumber * ReductionCoefficient;
 
-						return TargetNumber.toFixed(TargetPrecision);
+						return parseFloat(TargetNumber).toFixed(TargetPrecision);
 					});
 
 					var StructuredOpenTargets = OpenTargets.map((OpenTarget) => {
@@ -151,7 +151,7 @@ RastadSignals = {
 						// Change OpenTarget number before insert
 						OpenTargetNumber = OpenTargetNumber * ReductionCoefficient;
 
-						return OpenTargetNumber.toFixed(OpenTargetPrecision);
+						return parseFloat(OpenTargetNumber).toFixed(OpenTargetPrecision);
 					});
 
 					return {

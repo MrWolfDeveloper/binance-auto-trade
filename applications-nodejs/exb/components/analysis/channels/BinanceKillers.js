@@ -45,18 +45,19 @@ BinanceKillers = {
 				var StopLoss = Content.message.match(RegexFile.StopLoss);
 
 				if (Direction) {
-					Targets[0] = Targets[0].replace('shortterm:', '').split('-');
+					Targets[0] = Targets[0].replace('shortterm:', '').replace(/,/gm, '').split('-');
 
 					var ExchangeType = [];
 
-					EnterPrice = EnterPrice[0].replace('entry:', '').split('-');
+					EnterPrice = EnterPrice[0].replace('entry:', '').replace(/,/gm, '').split('-');
 
 					ExchangeType[0] = 'binance-futures';
 					ExchangeType[1] = Direction[0]
 						.replace('direction:', '')
-						.replace('📈', '')
+						.replace(/📈/gm, '')
 						.toLowerCase()
-						.replace(/\s+$/, '');
+						.replace(/\s+$/, '')
+						.replace(/📉/gm, '');
 
 					// Reduction coefficient
 					var ReductionCoefficient = 0.0;
@@ -97,7 +98,7 @@ BinanceKillers = {
 
 					StopLoss.indexOf('manual') > -1 ? (StopLossOBJ.Type = 'manual') : (StopLossOBJ.Type = 'normal');
 
-					StopLossOBJ.Number = StopLoss.replace('stoploss:', '');
+					StopLossOBJ.Number = StopLoss.replace(/,/gm, '').replace('stoploss:', '');
 
 					// Change StopLoss number before insert
 					var StopLossPrecision = BinanceKillers.Precision(
@@ -107,13 +108,15 @@ BinanceKillers = {
 					);
 
 					// StopLossOBJ.Number = StopLossOBJ.Number * ReductionCoefficient;
-					StopLossOBJ.Number = StopLossOBJ.Number.toFixed(StopLossPrecision);
+					StopLossOBJ.Number = parseFloat(StopLossOBJ.Number).toFixed(StopLossPrecision);
 
 					console.log(Targets);
 
 					// Remove empty targets
 					var NewTargets = Targets[0].map((Target) => Target.replace('Target:', '').trim());
 					NewTargets = NewTargets.filter((Item) => Item);
+
+					console.log(NewTargets, 'NewTargets');
 
 					var StructuredTargets = NewTargets.map((Target) => {
 						var TargetNumber = Target.replace('Target:', '').trim();
@@ -126,16 +129,15 @@ BinanceKillers = {
 						// Change Target number before insert
 						TargetNumber = TargetNumber * ReductionCoefficient;
 
-						return TargetNumber.toFixed(TargetPrecision);
+						return parseFloat(TargetNumber).toFixed(TargetPrecision);
 					});
 
 					return {
 						ChatID: `bk-${Content.id}`,
 						ExchangeType: ExchangeType,
-						Currency: Currency[0].replace('#', '').replace(/\s+$/, '').split('/'),
+						Currency: Currency,
 						EnterPrice: [ EnterPrice[0].trim(), EnterPrice[1].trim() ],
 						Targets: StructuredTargets,
-						OpenTargets: StructuredOpenTargets,
 						Capital: CapitalOBJ,
 						StopLoss: StopLossOBJ,
 						ForceStop: 'not-set',

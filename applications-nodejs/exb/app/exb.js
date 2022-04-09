@@ -56,7 +56,7 @@ global.FuturesPositionChecker = new (require(`../components/trade/exchanges/bina
 		/* -------------------------------------------------------------------------- */
 		/*                               Signal watcher                               */
 		/* -------------------------------------------------------------------------- */
-		SignalsWatcher.AddWatcherToFiles([ 'Rastad Signals', 'exbforcesignal' ]);
+		SignalsWatcher.AddWatcherToFiles([ 'Rastad Signals', 'exbforcesignal', 'BinanceKillers' ]);
 
 		/* -------------------------------------------------------------------------- */
 		/*                              Binance websocket                             */

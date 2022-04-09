@@ -8,7 +8,9 @@ var exbforcesignal = exbforcesignal || {};
 
 exbforcesignal = {
 	Precision: (ExchangeType, Currency, Amount) => {
-		Currency = Currency[0].replace('#', '').replace('/', '');
+		if (typeof Currency === 'object') Currency = Currency[0].replace('#', '').replace('/', '');
+
+		console.log(Currency, 'Currency');
 
 		if (ExchangeType === 'binance-spot') return SpotPricePrecision[Currency].PricePrecision;
 		if (ExchangeType === 'binance-futures') return FuturesPricePrecision[Currency].PricePrecision;
@@ -180,18 +182,19 @@ exbforcesignal = {
 					var Targets = Content.message.match(RegexFileBK.Targets);
 					var StopLoss = Content.message.match(RegexFileBK.StopLoss);
 
-					Targets[0] = Targets[0].replace('shortterm:', '').split('-');
+					Targets[0] = Targets[0].replace('shortterm:', '').replace(/,/gm, '').split('-');
 
 					var ExchangeType = [];
 
-					EnterPrice = EnterPrice[0].replace('entry:', '').split('-');
+					EnterPrice = EnterPrice[0].replace('entry:', '').replace(/,/gm, '').split('-');
 
 					ExchangeType[0] = 'binance-futures';
 					ExchangeType[1] = Direction[0]
 						.replace('direction:', '')
-						.replace('📈', '')
+						.replace(/📈/gm, '')
 						.toLowerCase()
-						.replace(/\s+$/, '');
+						.replace(/\s+$/, '')
+						.replace(/📉/gm, '');
 
 					// Reduction coefficient
 					var ReductionCoefficient = 0.0;
@@ -206,6 +209,7 @@ exbforcesignal = {
 					var CurrencyAndRange = Currency[0].split('(');
 					console.log(CurrencyAndRange[0].replace('coin:', '').replace('$', '').toUpperCase().split('/'));
 					Currency = CurrencyAndRange[0].replace('coin:', '').replace('$', '').toUpperCase().split('/');
+					console.log(Currency, 'CurrencyCurrency');
 
 					CapitalOBJ.Leverage = 'isolated';
 					CapitalOBJ.Range = CurrencyAndRange[1]
@@ -232,17 +236,17 @@ exbforcesignal = {
 
 					StopLoss.indexOf('manual') > -1 ? (StopLossOBJ.Type = 'manual') : (StopLossOBJ.Type = 'normal');
 
-					StopLossOBJ.Number = StopLoss.replace('stoploss:', '');
+					StopLossOBJ.Number = StopLoss.replace(/,/gm, '').replace('stoploss:', '');
 
 					// Change StopLoss number before insert
 					var StopLossPrecision = exbforcesignal.Precision(
 						ExchangeType[0],
-						[ Currency.join('').replace('coin:', '').toUpperCase() ],
+						Currency.join(''),
 						StopLossOBJ.Number
 					);
 
 					// StopLossOBJ.Number = StopLossOBJ.Number * ReductionCoefficient;
-					StopLossOBJ.Number = exbforcesignal.ToFixed(StopLossOBJ.Number, StopLossPrecision);
+					StopLossOBJ.Number = parseFloat(StopLossOBJ.Number).toFixed(StopLossPrecision);
 
 					console.log(Targets);
 
@@ -250,11 +254,13 @@ exbforcesignal = {
 					var NewTargets = Targets[0].map((Target) => Target.replace('Target:', '').trim());
 					NewTargets = NewTargets.filter((Item) => Item);
 
+					console.log(NewTargets, 'NewTargets');
+
 					var StructuredTargets = NewTargets.map((Target) => {
 						var TargetNumber = Target.replace('Target:', '').trim();
 						var TargetPrecision = exbforcesignal.Precision(
 							ExchangeType[0],
-							[ Currency.join('').replace('coin:', '').toUpperCase() ],
+							Currency.join(''),
 							TargetNumber
 						);
 
@@ -264,27 +270,12 @@ exbforcesignal = {
 						return parseFloat(TargetNumber).toFixed(TargetPrecision);
 					});
 
-					// console.log({
-					// 	ChatID: `bkf-${Content.id}`,
-					// 	ExchangeType: ExchangeType,
-					// 	Currency: Currency,
-					// 	EnterPrice: [ EnterPrice[0].trim(), EnterPrice[1].trim() ],
-					// 	Targets: StructuredTargets,
-					// 	OpenTargets: [],
-					// 	Capital: CapitalOBJ,
-					// 	StopLoss: StopLossOBJ,
-					// 	ForceStop: 'not-set',
-					// 	PositionStatus: 'open',
-					// 	SignalDate: new Date(Date.now())
-					// });
-
 					return {
 						ChatID: `bkf-${Content.id}`,
 						ExchangeType: ExchangeType,
 						Currency: Currency,
 						EnterPrice: [ EnterPrice[0].trim(), EnterPrice[1].trim() ],
 						Targets: StructuredTargets,
-						OpenTargets: [],
 						Capital: CapitalOBJ,
 						StopLoss: StopLossOBJ,
 						ForceStop: 'not-set',
