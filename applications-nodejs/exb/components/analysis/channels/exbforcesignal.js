@@ -203,7 +203,7 @@ exbforcesignal = {
 					else if (ExchangeType[1] === 'short') ReductionCoefficient = 1.001;
 
 					var CapitalOBJ = {
-						Percentage: '2'
+						Percentage: '3'
 					};
 
 					var CurrencyAndRange = Currency[0].split('(');
@@ -276,6 +276,7 @@ exbforcesignal = {
 						Currency: Currency,
 						EnterPrice: [ EnterPrice[0].trim(), EnterPrice[1].trim() ],
 						Targets: StructuredTargets,
+						OpenTargets: [],
 						Capital: CapitalOBJ,
 						StopLoss: StopLossOBJ,
 						ForceStop: 'not-set',

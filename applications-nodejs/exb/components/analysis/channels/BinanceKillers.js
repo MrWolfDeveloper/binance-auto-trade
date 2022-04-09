@@ -138,6 +138,7 @@ BinanceKillers = {
 						Currency: Currency,
 						EnterPrice: [ EnterPrice[0].trim(), EnterPrice[1].trim() ],
 						Targets: StructuredTargets,
+						OpenTargets: [],
 						Capital: CapitalOBJ,
 						StopLoss: StopLossOBJ,
 						ForceStop: 'not-set',
