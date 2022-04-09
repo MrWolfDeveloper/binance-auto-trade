@@ -1,0 +1,1218 @@
+{
+	"BTCUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "1000",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ETHUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BCHUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"XRPUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"EOSUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LTCUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"TRXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ETCUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LINKUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"XLMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ADAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "2000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"XMRUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"DASHUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ZECUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"XTZUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BNBUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ATOMUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ONTUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"IOTAUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BATUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"VETUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"NEOUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"QTUMUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "500000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"IOSTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"THETAUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ALGOUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ZILUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"KNCUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "5000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ZRXUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"COMPUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"OMGUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"DOGEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"SXPUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"KAVAUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BANDUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"RLCUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"WAVESUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"MKRUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SNXUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"DOTUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"DEFIUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"YFIUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "500",
+		"TickSize": 0,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BALUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CRVUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"TRBUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"YFIIUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "500",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"RUNEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SUSHIUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"SRMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"EGLDUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SOLUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ICXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"STORJUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BLZUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"UNIUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"AVAXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "100000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"FTMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"HNTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ENJUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"FLMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"TOMOUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"RENUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"KSMUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"NEARUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"AAVEUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"FILUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"RSRUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LRCUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"MATICUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"OCEANUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CVCUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BELUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CTKUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"AXSUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ALPHAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ZENUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SKLUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"GRTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"1INCHUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BTCBUSD": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "500",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"AKROUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CHZUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SANDUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ANKRUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LUNAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BTSUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LITUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"UNFIUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"DODOUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "500000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"REEFUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"RVNUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SFPUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"XEMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"BTCSTUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.8500", "MultiplierUp": "1.1500" }
+	},
+	"COTIUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "5000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CHRUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"MANAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ALICEUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "50000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"HBARUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ONEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"LINAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"STMXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"DENTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"CELRUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"HOTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "20000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"MTLUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"OGNUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"NKNUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"SCUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"DGBUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"1000SHIBUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "100000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ICPUSDT": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 2,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "100000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BAKEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "500000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"GTCUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"ETHBUSD": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BTCDOMUSDT": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9000", "MultiplierUp": "1.1000" }
+	},
+	"TLMUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BNBBUSD": {
+		"QuantityPrecision": 2,
+		"PricePrecision": 3,
+		"MinQuantity": "0.01",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ADABUSD": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"XRPBUSD": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"IOTXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"DOGEBUSD": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 6,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"AUDIOUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"RAYUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "500000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"C98USDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "250000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"MASKUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "100000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ATAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"SOLBUSD": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"FTTBUSD": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"DYDXUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"1000XECUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"GALAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"CELOUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ARUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"KLAYUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ARPAUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"CTSIUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"LPTUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ENSUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"PEOPLEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.8500", "MultiplierUp": "1.1500" }
+	},
+	"ANTUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ROSEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"DUSKUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"1000BTTCUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 7,
+		"MinQuantity": "1",
+		"MaxQuantity": "30000000",
+		"TickSize": 6,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"FLOWUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 3,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"IMXUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 4,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"API3USDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ANCUSDT": {
+		"QuantityPrecision": 1,
+		"PricePrecision": 4,
+		"MinQuantity": "0.1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"GMTUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 5,
+		"MinQuantity": "1",
+		"MaxQuantity": "10000000",
+		"TickSize": 5,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"APEUSDT": {
+		"QuantityPrecision": 0,
+		"PricePrecision": 4,
+		"MinQuantity": "1",
+		"MaxQuantity": "1000000",
+		"TickSize": 3,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"BTCUSDT_220624": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 1,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "500",
+		"TickSize": 1,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	},
+	"ETHUSDT_220624": {
+		"QuantityPrecision": 3,
+		"PricePrecision": 2,
+		"MinQuantity": "0.001",
+		"MaxQuantity": "10000",
+		"TickSize": 2,
+		"PercentPrice": { "MultiplierDecimal": "4", "MultiplierDown": "0.9500", "MultiplierUp": "1.0500" }
+	}
+}

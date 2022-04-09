@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Binance Force Stop</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/skeleton.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/jquery.dataTables.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="stylesheet" href="./css/tab.css">
+        <style>
+            body {
+                background-color: #EEE;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="margin: -450px; margin-top: 15%;">
+                <a href="/system/logout" style="font-size: 18px;" class="button-primary">Logout</a><br>
+                <h2>EXB Master Panel - V1.0 By MrWolf</h2>
+
+                <div style="max-width: 40% !important;" id="ForceStopModal" class="modal"></div>
+
+                <div style="max-width: 90% !important;" id="SignalsModal" class="modal">
+                    <table id="UserSignalsTable" style="width: 90% !important;" class="display">
+                        <thead>
+                            <tr>
+                                <th>Exchange type</th>
+                                <th>Chat ID</th>
+                                <th>Currency</th>
+                                <th>Enter price</th>
+                                <th>Targets</th>
+                                <th>Signal status</th>
+                                <th>Force stop</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div style="max-width: 40% !important;" id="TSModal" class="modal"></div>
+                <div style="max-width: 40% !important;" id="EXDataModal" class="modal"></div>
+                <div style="max-width: 40% !important;" id="UserDataModal" class="modal"></div>
+                <div style="max-width: 40% !important;" id="DeleteUserModal" class="modal"></div>
+                <div style="max-width: 40% !important;" id="ForceStopUserModal" class="modal"></div>
+
+                <div class="tab">
+                    <button class="tablinks" onclick="OpenTab(event, 'Signals')">Signals</button>
+                    <button class="tablinks" onclick="OpenTab(event, 'ForceSignal')">Force Signal</button>
+                    <button class="tablinks" onclick="OpenTab(event, 'Users')">Users list</button>
+                    <button class="tablinks" onclick="OpenTab(event, 'NewUser')">New user</button>
+                </div>
+                <div id="Signals" class="tabcontent">
+                    <table id="SignalsTable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Exchange type</th>
+                                <th>Chat ID</th>
+                                <th>Currency</th>
+                                <th>Enter price</th>
+                                <th>Submited targets length</th>
+                                <th>Open targets</th>
+                                <th>Capital</th>
+                                <th>Signal date</th>
+                                <th>Force stop</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="ForceSignal" class="tabcontent">
+                    <br>
+                    <h5>Force Signal</h5>
+                    <br>
+                    <center>
+                        <div class="row">
+                            <div class="four columns">
+                                <label for="EXType">Exchange type</label>
+                                <select onchange="EXTypeListener()" class="u-full-width" id="EXType">
+                                    <option selected value="Binance Spot">Binance spot</option>
+                                    <option value="Binance Futures (LONG)">Binance futures - long</option>
+                                    <option value="Binance Futures (SHORT)">Binance futures - short</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="LeverageRange" class="row"></div>
+                        <div class="row">
+                            <div class="two columns">
+                                <label for="EPFrom">Currency - from</label>
+                                <input class="u-full-width" type="text" placeholder="KSM" id="CFrom">
+                              </div>
+                            <div class="two columns">
+                              <label for="EPTo">Currency  - to</label>
+                              <input class="u-full-width" type="text" placeholder="USDT" id="CTo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">
+                                <label for="EPFrom">Entery price - from</label>
+                                <input class="u-full-width" type="text" placeholder="32000" id="EPFrom">
+                              </div>
+                            <div class="two columns">
+                              <label for="EPTo">Entery price - to</label>
+                              <input class="u-full-width" type="text" placeholder="37000" id="EPTo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">
+                                <label for="T1">Traget 1</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="T1">
+                            </div>
+                            <div class="two columns">
+                                <label for="T2">Traget 2</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="T2">
+                            </div>
+                            <div class="two columns">
+                                <label for="T3">Traget 3</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="T3">
+                            </div>
+                            <div class="two columns">
+                                <label for="T4">Traget 4</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="T4">
+                            </div>
+                            <div class="two columns">
+                                <label for="T5">Traget 5</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="T5">
+                            </div>
+                            <div class="two columns">
+                                <label for="OT">Open Targets</label>
+                                <input class="u-full-width" type="text" placeholder="45000" id="OT">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="four columns">
+                                <label for="SLTypeListener">Stoploss</label>
+                                <select class="u-full-width" id="SLTypeListener" onchange="SLTypeListener()">
+                                    <option value="">Select stoploss type</option>
+                                    <option value="normal">Normal stoploss</option>
+                                    <option value="manual">Manual stoploss (candle)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">
+                                <label for="OT">Capital</label>
+                                <input class="u-full-width" type="text" placeholder="2" id="CapitalNumber">
+                            </div>
+                        </div>
+                        <div class="row" id="stoploss-collapse"></div>
+                    </center>
+                    
+                    <input onclick="SendForceSignal()" id="SendForceSignal" class="button-primary" type="submit" value="Send">
+                    <br>
+                </div>
+                <div id="Users" class="tabcontent">
+                    <table id="UsersTable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Phone number</th>
+                                <th>Free plan used?</th>
+                                <th>Plan start date</th>
+                                <th>Plan end date</th>
+                                <th>Account status</th>
+                                <th>Signals</th>
+                                <th>Trade span</th>
+                                <th>Exchanges data</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div id="NewUser" class="tabcontent">
+                    <br>
+                    <h5>Add User</h5>
+                    <br>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label for="UserUsername">User Username</label>
+                            <input class="u-full-width" type="text" placeholder="Ahmad" id="UserUsername">
+                          </div>
+                        <div class="twelve columns">
+                          <label for="UserEmail">User email</label>
+                          <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="UserEmail">
+                        </div>
+                        <div class="twelve columns">
+                            <label for="UserPhoneNumber">User Phone number</label>
+                            <input class="u-full-width" type="text" placeholder="Phone number" id="UserPhoneNumber">
+                        </div>
+                        <div class="twelve columns">
+                            <label for="UserBinanceAPIKEY">User Binance APIKEY</label>
+                            <input class="u-full-width" type="text" placeholder="Binance APIKEY" id="UserBinanceAPIKEY">
+                        </div>
+                        <div class="twelve columns">
+                            <label for="UserBinanceAPISECRET">User Binance APISECRET</label>
+                            <input class="u-full-width" type="text" placeholder="Binance APISECRET" id="UserBinanceAPISECRET">
+                        </div>
+                        <div class="twelve columns">
+                            <label for="UserPlan">User Plan</label>
+                            <select class="u-full-width" id="UserPlan">
+                                <option selected value="free">Free</option>
+                                <option value="starter">Starter</option>
+                                <option value="base">Base</option>
+                                <option value="pro">Pro</option>
+                                <option value="peerbtc">Peer BTC</option>
+                                <option value="customized">Customized</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input id="AddUser" onclick="AddUser()" class="button-primary" type="submit" value="CREATE">
+                    <br>
+                </div>
+
+                <br><br>
+            </div>
+        </div>
+
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/jquery.dataTables.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="./js/api-url.js"></script>
+        <script src="./js/api-functions.js"></script>
+        <script src="./js/tab.js"></script>
+        <script>
+            function AddUser () {
+                var Username = $("input#UserUsername").val();
+                var Email = $("input#UserEmail").val();
+                var PhoneNumber = $("input#UserPhoneNumber").val();
+                var BinanceAPIKEY = $("input#UserBinanceAPIKEY").val();
+                var BinanceAPISECRET = $("input#UserBinanceAPISECRET").val();
+                var UserPlan = $("select#UserPlan").val();
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/adduser',
+                    data: {
+                        Username: Username,
+                        Email: Email,
+                        PhoneNumber: PhoneNumber,
+                        ExchangesData: {
+                            Binance: {
+                                APIKey: BinanceAPIKEY,
+                                APISecret: BinanceAPISECRET
+                            }
+                        },
+                        PlanID: UserPlan
+                    },
+                    success: (Data) => {
+                        if (Data.status) {
+                            alert('New user added.');
+                        } else {
+                            alert('Add user error, dup_username / dup_email / dup_phonenumber')
+                        }                       
+                    }
+                });
+            }
+
+            function SLTypeListener () {
+                var SLTypeListener = $("select#SLTypeListener").val();
+
+                if (SLTypeListener === 'normal') {
+                    $("div#stoploss-collapse").html(`
+                        <div class="two columns">
+                            <label for="NormalStoploss">Normal stoploss</label>
+                            <input class="u-full-width" type="text" placeholder="45000" id="NormalStoploss">
+                        </div>
+                    `);
+                } else if (SLTypeListener === 'manual') {
+                    $("div#stoploss-collapse").html(`
+                        <div class="two columns">
+                            <label for="CandleInterval">Candle interval</label>
+                            <select class="u-full-width" id="CandleInterval">
+                                <option value="(1m)">1m</option>
+                                <option value="(1h)">1h</option>
+                                <option value="(4h)">4h</option>
+                                <option value="daily (D)">daily</option>
+                                <option value="weekly (W)">weekly</option>
+                            </select>
+                        </div>
+                        <div class="two columns">
+                            <label for="CandleSide">Candle side</label>
+                            <select class="u-full-width" id="CandleSide">
+                                <option value="above">Above</option>
+                                <option value="below">Below</option>
+                            </select>
+                        </div>
+                        <div class="two columns">
+                            <label for="CandleNumber">Candle number</label>
+                            <input class="u-full-width" type="text" placeholder="45000" id="CandleNumber">
+                        </div>
+                    `);
+                } else {
+                    $("div#stoploss-collapse").html('');
+                }
+            }
+            
+            function EXTypeListener () {
+                var EXTypeListener = $("select#EXType").val();
+
+                if (EXTypeListener === 'Binance Futures (LONG)' || EXTypeListener === 'Binance Futures (SHORT)') {
+                    $('div#LeverageRange').html(`
+                            <div class="two columns">
+                                <label for="EPFrom">Leverage - from</label>
+                                <input class="u-full-width" type="text" placeholder="2" id="LFrom">
+                              </div>
+                            <div class="two columns">
+                              <label for="EPTo">Leverage  - to</label>
+                              <input class="u-full-width" type="text" placeholder="5" id="LTo">
+                            </div>
+                    `);
+                } else if (EXTypeListener === 'Binance Spot') {
+                    $('div#LeverageRange').html(``);
+                }
+            }
+
+            function SendForceSignal () {
+                var EXType = $("select#EXType").val();
+
+                var EPFrom = $("input#EPFrom").val();
+                var EPTo = $("input#EPTo").val();
+
+                var CFrom = $("input#CFrom").val();
+                var CTo = $("input#CTo").val();
+                
+                var T1 = $("input#T1").val();
+                var T2 = $("input#T2").val();
+                var T3 = $("input#T3").val();
+                var T4 = $("input#T4").val();
+                var T5 = $("input#T5").val();
+                var OT = $("input#OT").val();
+
+                var Capital = $("input#CapitalNumber").val();
+
+                var EXTypeListener = $("select#EXType").val();
+                var CapitalText = '';
+                if (EXTypeListener === 'Binance Futures (LONG)' || EXTypeListener === 'Binance Futures (SHORT)') {
+                    var LFrom = $("input#LFrom").val();
+                    var LTo = $("input#LTo").val();
+                    var LeverageText = '';
+
+                    if (LTo != '') LeverageText = `${LFrom}-${LTo}`;
+                    else if (LTo === '') LeverageText = LFrom;
+
+                    CapitalText = `${Capital}% CAPITAL (Isolated ${LeverageText}X)`;
+                } else if (EXTypeListener === 'Binance Spot') {
+                    CapitalText = `${Capital}% CAPITAL`;
+                }
+
+                var SLTypeListener = $("select#SLTypeListener").val();
+                var StoplossText = '';
+                if (SLTypeListener === 'normal') {
+                    var SL = $("#NormalStoploss").val();
+
+                    if (SL != '') StoplossText = `Normal Stop Loss: ${SL}`;
+                } else if (SLTypeListener === 'manual') {
+                    var CandleInterval = $("select#CandleInterval").val();
+                    var CandleSide = $("select#CandleSide").val();
+                    var CandleNumber = $("#CandleNumber").val();
+
+                    if (CandleNumber != '') StoplossText = `Manual Stop Loss: \nClose ${CandleInterval} candle ${CandleSide} ${CandleNumber}`;
+                }
+
+                $('input#SendForceSignal').text('Please wait ...')
+                $('input#SendForceSignal').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/sendforcesignal',
+                    data: {
+                        EXType: EXType,
+                        EPFrom: EPFrom,
+                        EPTo: EPTo,
+                        CFrom: CFrom,
+                        CTo: CTo,
+                        T1: T1,
+                        T2: T2,
+                        T3: T3,
+                        T4: T4,
+                        T5: T5,
+                        OT: OT,
+                        CapitalText: CapitalText,
+                        StoplossText: StoplossText
+                    },
+                    success: () => {
+                        alert('Force signal sent to the force channel.');
+
+                        OpenTab(event, 'ForceSignal');
+                    }
+                });
+            }
+
+            function ForceStopModal (ChatID) {
+                var InsertHTML = `
+                    <h2>Force stop signal confirm</h2>
+                    <h5>Are you sure you want to forcestop the <strong><em>'${ChatID}'</em></strong>?</h5><br>
+                    <button id="FroceStopReal" style="background-color: #DF5E5E; border-color: #DF5E5E;margin-left: 10px;" onclick='ForceStop("${ChatID}")' class="button-primary">Yes, Forcestop</button>
+                `;
+
+                $("#ForceStopModal").html(InsertHTML);
+
+                $("#ForceStopModal").modal({
+                    fadeDuration: 100
+                });
+            }
+
+            function ForceStop (ChatID) {
+                $('button#FroceStopReal').text('Please wait ...')
+                $('button#FroceStopReal').prop('disabled', true);
+
+                $.ajax({
+                    url: '/system/forcestop',
+                    method: 'POST',
+                    data: {
+                        ChatID: ChatID
+                    },
+                    success: (Data) => {
+                        $.modal.close();
+
+                        alert("Signal force stop running ...");
+
+                        OpenTab(event, 'Signals');
+                    }
+                });
+            }
+
+            function ForceStopUserModal (Username, ChatID) {
+                var InsertHTML = `
+                    <h2>Delete signal user confirm</h2>
+                    <h5>Are you sure you want to delete the <strong>'${ChatID}'</strong> <strong><em>'${Username}'</em></strong>?</h5><br>
+                    <button id="DeleteSignalForUser" style="background-color: #DF5E5E; border-color: #DF5E5E;margin-left: 10px;" onclick='DeleteSignalForUser("${Username}", "${ChatID}")' class="button-primary">Yes, Delete</button>
+                `;
+
+                $("#ForceStopUserModal").html(InsertHTML);
+
+                $("#ForceStopUserModal").modal({
+                    fadeDuration: 100
+                });
+            }
+
+            function DeleteSignalForUser (Username, ChatID) {
+                $('button#DeleteSignalForUser').text('Please wait ...')
+                $('button#DeleteSignalForUser').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/forcestop-user',
+                    data: {
+                        Username: Username,
+                        ChatID: ChatID
+                    },
+                    success: () => {
+                        $.modal.close();
+                        
+                        alert('Signal deleted!');
+
+                        OpenTab(event, 'Users');
+                    }
+                });
+            }
+
+            function ShowUserSignals (Username, Signals) {
+                var NewSignals = Signals.map((Signal) => {
+                    if (Signal.PositionStatus === 'forcestop') {
+                        var ForceStopBTN = `<h5 style="color: #DF5E5E">Stopped</h5>`;
+                    } else{
+                        var ForceStopBTN = `<button style="background-color: #DF5E5E; border-color: #DF5E5E;" onclick="ForceStopUserModal('${Username}', '${Signal.SignalChatID}')" id="${Signal.ChatID}" class="button-primary">Force stop</button>`;
+                    }
+
+                    return {
+                        ExchangeType: Signal.ExchangeType.join(" ").toUpperCase(),
+                        ChatID: Signal.SignalChatID,
+                        Currency: Signal.Currency.join(" / ").toUpperCase(),
+                        EnterPrice: Signal.EntryPrice,
+                        SubmitedTargets: Signal.DoneTargets.length,
+                        SignalStatus: Signal.PositionStatus,
+                        ForceStop: ForceStopBTN,
+                    }
+                });
+
+                $("#UserSignalsTable").DataTable({
+                    data: NewSignals,
+                    columns: [
+                        { data: 'ExchangeType' },
+                        { data: 'ChatID' },
+                        { data: 'Currency' },
+                        { data: 'EnterPrice' },
+                        { data: 'SubmitedTargets' },
+                        { data: 'SignalStatus' },
+                        { data: 'ForceStop' }
+                    ],
+                    destroy: true,
+                });
+
+                $("#SignalsModal").modal({
+                    fadeDuration: 100
+                });
+            }
+            
+            function ShowUserTS (Username, TS) {
+                var SpotUSDT = !TS.Binance.SpotUSDT || 'checked';
+                var SpotBTC = !TS.Binance.SpotBTC || 'checked';
+                var Futures = !TS.Binance.Futures || 'checked';
+
+                var InsertHTML = `
+                    <h2>User binance trade span</h2>
+
+                    <div class="row">
+                        <div class="four columns">
+                            <label class="ts">
+                                <input ${SpotUSDT} type="checkbox" id="TSSUSDT">
+                                <span class="label-body">Binance spot 'USDT'</span>
+                            </label>
+                        </div>
+
+                        <div class="four columns">
+                            <label class="ts">
+                                <input ${SpotBTC} type="checkbox" id="TSSBTC">
+                                <span class="label-body">Binance spot 'BTC'</span>
+                            </label>
+                        </div>
+
+                        <div class="four columns">
+                            <label class="ts">
+                                <input ${Futures} type="checkbox" id="TSF">
+                                <span class="label-body">Binance futures</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="SaveUserTS" onclick="SaveNewTS('${Username}')" class="button-primary">Save</button>
+                `;
+
+                $("#TSModal").html(InsertHTML);
+
+                $("#TSModal").modal({
+                    fadeDuration: 100
+                });
+            }
+
+            function SaveNewTS (Username) {
+                $('button#SaveUserTS').text('Please wait ...')
+                $('button#SaveUserTS').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/userupdate',
+                    data: {
+                        Username: Username,
+                        NewData: {
+                            TradeSpan: {
+                                Binance: {
+                                    SpotUSDT: $('#TSSUSDT').is(":checked"),
+                                    SpotBTC: $('#TSSBTC').is(":checked"),
+                                    Futures: $('#TSF').is(":checked")
+                                }
+                            }
+                        }
+                        
+                    },
+                    success: () => {
+                        $.modal.close();
+                        
+                        alert('User trade span updated!');
+
+                        OpenTab(event, 'Users');
+                    }
+                });
+            }
+            
+            function ShowUserEXData (Username, EXData) {
+                var VeryHighRiskSignal = !EXData.Binance.VeryHighRiskSignal || 'checked';
+                
+                var InsertHTML = `
+                    <h2>User binance data</h2>
+
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="BinanceAPIKEY">Binance APIKEY</label>
+                                <input class="u-full-width" type="text" placeholder="Binance APIKEY" id="BinanceAPIKEY" value="${EXData.Binance.APIKey}">
+                            </label>
+                        </div>
+
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="BinanceAPISECRET">Binance APISECRET</label>
+                                <input class="u-full-width" type="text" placeholder="Binance APIKEY" id="BinanceAPISECRET" value="${EXData.Binance.APISecret}">
+                            </label>
+                        </div>
+
+                        <div class="three columns">
+                            <label class="ts">
+                                <label for="BSPCAUSDT">Binance Spot Ceiling Amount - USDT</label>
+                                <input class="u-full-width" type="text" placeholder="Binance Spot Ceiling Amount - USDT" id="BSPCAUSDT" value="${EXData.Binance.SpotCeilingAmount.USDT}">
+                            </label>
+                        </div>
+                        <div class="three columns">
+                            <label class="ts">
+                                <label for="BSPCABTC">Binance Spot Ceiling Amount - BTC</label>
+                                <input class="u-full-width" type="text" placeholder="Binance Spot Ceiling Amount - BTC" id="BSPCABTC" value="${EXData.Binance.SpotCeilingAmount.BTC}">
+                            </label>
+                        </div>
+                        <div class="three columns">
+                            <label class="ts">
+                                <label for="BFCA">Binance Futures Ceiling Amount</label>
+                                <input class="u-full-width" type="text" placeholder="Binance Futures Ceiling Amount" id="BFCA" value="${EXData.Binance.FuturesCeilingAmount.USDT}">
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <label class="VeryHighRiskSignal">
+                        <input ${VeryHighRiskSignal} id="VeryHighRiskSignal" type="checkbox">
+                        <span class="label-body">Trade Very High Risk Signal</span>
+                    </label>
+
+                    <button id="SaveNewEX" onclick="SaveNewEX('${Username}')" class="button-primary">Save</button>
+                `;
+
+                $("#EXDataModal").html(InsertHTML);
+
+                $("#EXDataModal").modal({
+                    fadeDuration: 100
+                });
+            }
+            
+            function SaveNewEX(Username) {
+                $('button#SaveNewEX').text('Please wait ...')
+                $('button#SaveNewEX').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/userupdate',
+                    data: {
+                        Username: Username,
+                        NewData: {
+                            ExchangesData: {
+                                Binance: {
+                                    APIKey: $('#BinanceAPIKEY').val(),
+                                    APISecret: $('#BinanceAPISECRET').val(),
+                                    VeryHighRiskSignal: $('#VeryHighRiskSignal').is(":checked"),
+                                    SpotCeilingAmount: {
+                                        USDT: $('#BSPCAUSDT').val(),
+                                        BTC: $('#BSPCABTC').val()
+                                    },
+                                    FuturesCeilingAmount: {
+                                        USDT: $('input#BFCA').val()
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    success: () => {
+                        $.modal.close();
+                        
+                        alert('User exchanges data updated!');
+
+                        OpenTab(event, 'Users');
+                    }
+                });
+            }
+
+            function UserEditModal (Username, Data) {
+                var UseFreePlan = !Data.UseFreePlan || 'checked';
+
+                var AccountStatusOptions = [ 'unpaid', 'free-plan', 'monetary-plan', 'expired', 'banned-account' ].map((AC) => {
+                    if (Data.AccountStatus === AC) return `<option selected value="${AC}">${AC}</option>`;
+
+                    return `<option value="${AC}">${AC}</option>`
+                });
+
+                var AccountPlanID = ['free', 'starter', 'base', 'pro', 'peerbtc', 'customized', ].map((AP) => {
+                    if (Data.SubscriptionData.PlanID === AP) return `<option selected value="${AP}">${AP}</option>`;
+
+                    return `<option value="${AP}">${AP}</option>`
+                });
+
+                var InsertHTML = `
+                    <h2>Binance user data</h2>
+
+                    <div class="row">
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="AccountStatus">Account status</label>
+                                <select class="u-full-width" id="AccountStatus">
+                                    ${AccountStatusOptions.join("")}
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="Username">Username</label>
+                                <input class="u-full-width" type="text" placeholder="Username" id="Username" value="${Username}">
+                            </label>
+                        </div>
+
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="Email">Email</label>
+                                <input class="u-full-width" type="text" placeholder="Email" id="Email" value="${Data.Email}">
+                            </label>
+                        </div>
+
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="PhoneNumber">Phone number</label>
+                                <input class="u-full-width" type="text" placeholder="PhoneNumber" id="PhoneNumber" value="${Data.PhoneNumber}">
+                            </label>
+                        </div>
+
+                        <div class="twelve columns">
+                            <label class="ts">
+                                <label for="AccountStatus">Account plan</label>
+                                <select class="u-full-width" id="AccountPlan">
+                                    ${AccountPlanID.join("")}
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="five columns">
+                            <label class="ts">
+                                <label for="AccountStatus">Plan start date</label>
+                                <input class="u-full-width" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="PlanStartDate" value="${Data.SubscriptionData.PlanStartDate}">
+                            </label>
+                        </div>
+
+                        <div class="five columns">
+                            <label class="ts">
+                                <label for="AccountStatus">Plan end date</label>
+                                <input class="u-full-width" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="PlanEndDate" value="${Data.SubscriptionData.PlanEndDate}">
+                            </label>
+                        </div>
+                    </div>
+
+                    <label class="UseFreePlan">
+                        <input ${UseFreePlan} id="UseFreePlan" type="checkbox">
+                        <span class="label-body">free plan used?</span>
+                    </label>
+
+                    <button id="SaveNewUserData" onclick="SaveNewUserData('${Username}')" class="button-primary">Save</button>
+                `;
+
+                $("#UserDataModal").html(InsertHTML);
+
+                $("#UserDataModal").modal({
+                    fadeDuration: 100
+                });
+            }
+
+            function SaveNewUserData (Username) {
+                $('button#SaveNewUserData').text('Please wait ...')
+                $('button#SaveNewUserData').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/userupdate',
+                    data: {
+                        Username: Username,
+                        NewData: {
+                            AccountStatus: $("select#AccountStatus").val(),
+                            Username: $("#Username").val(),
+                            Email: $("#Email").val(),
+                            PhoneNumber: $("#PhoneNumber").val(),
+                            SubscriptionData: {
+                                TXID: 'free',
+                                PlanID: $("#AccountPlan").val(),
+                                PlanStartDate: new Date($("#PlanStartDate").val()),
+                                PlanEndDate: new Date($("#PlanEndDate").val()),
+                            },
+                            UseFreePlan: $("#UseFreePlan").is(':checked')
+                        }
+                    },
+                    success: () => {
+                        $.modal.close();
+                        
+                        alert('User data updated!');
+
+                        OpenTab(event, 'Users');
+                    }
+                });
+            }
+            
+            function DeleteUser (Username) {
+                var InsertHTML = `
+                    <h2>Delete user confirm</h2>
+                    <h5>Are you sure you want to delete the <strong><em>'${Username}'</em></strong>?</h5><br>
+                    <button id="DeleteUserModal" style="background-color: #DF5E5E; border-color: #DF5E5E;margin-left: 10px;" onclick='DeleteUserReal("${Username}")' class="button-primary">Yes, Delete</button>
+                `;
+
+                $("#DeleteUserModal").html(InsertHTML);
+
+                $("#DeleteUserModal").modal({
+                    fadeDuration: 100
+                });
+            }
+
+            function DeleteUserReal(Username) {
+                $('button#DeleteUserModal').text('Please wait ...')
+                $('button#DeleteUserModal').prop('disabled', true);
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/deleteuser',
+                    data: {
+                        Username: Username
+                    },
+                    success: () => {
+                        $.modal.close();
+                        
+                        alert('User deleted!');
+
+                        OpenTab(event, 'Users');
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

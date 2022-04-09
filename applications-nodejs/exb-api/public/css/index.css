@@ -1,0 +1,8 @@
+body {
+    font-family: 'Roboto Mono';
+}
+
+th.sorting,
+tbody > tr > td {
+    font-size: 12px !important;
+}
