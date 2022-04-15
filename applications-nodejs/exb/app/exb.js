@@ -81,6 +81,8 @@ global.FuturesPositionChecker = new (require(`../components/trade/exchanges/bina
 		// Make sure websocket connected
 		global.ChartListener = new ChartListener();
 
+		global.ChartListener.AddPendingStopLossFromDatabase();
+
 		// Create websocket message listener
 		global.SpotPositionChecker.RunSpotChecker();
 

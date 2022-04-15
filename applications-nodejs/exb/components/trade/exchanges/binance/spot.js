@@ -634,6 +634,7 @@ class MainBinanceSpot extends BinanceTools {
 				Quantity - OtherRemainingQuantity,
 				SpotSymbolData[Currency].QuantityPrecision
 			);
+		else OtherRemainingQuantity = 0;
 
 		var TakeProfitItems = [];
 		var StopLossItems = [];
