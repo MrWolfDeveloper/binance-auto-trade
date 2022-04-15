@@ -1,0 +1,116 @@
+{
+	"free": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 10000,
+				"BTC": 0.4
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 10000
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": true,
+			"SpotBTC": true,
+			"Futures": true
+		},
+		"DurationDay": 7,
+		"Price": 0
+	},
+	"starter": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 3000,
+				"BTC": 0.1
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 3000
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": true,
+			"SpotBTC": true,
+			"Futures": true
+		},
+		"DurationDay": 30,
+		"Price": 100
+	},
+	"base": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 5000,
+				"BTC": 0.2
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 5000
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": true,
+			"SpotBTC": true,
+			"Futures": true
+		},
+		"DurationDay": 30,
+		"Price": 150
+	},
+	"pro": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 8000,
+				"BTC": 0.4
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 8000
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": true,
+			"SpotBTC": true,
+			"Futures": true
+		},
+		"DurationDay": 30,
+		"Price": 200
+	},
+	"peerbtc": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 0,
+				"BTC": 0.4
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 0
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": false,
+			"SpotBTC": true,
+			"Futures": false
+		},
+		"DurationDay": 30,
+		"Price": 80
+	},
+	"customized": {
+		"ExchangesData": {
+			"VeryHighRiskSignal": true,
+			"SpotCeilingAmount": {
+				"USDT": 10000000000000000000000000,
+				"BTC": 10000000000000000000000000
+			},
+			"FuturesCeilingAmount": {
+				"USDT": 10000000000000000000000000
+			}
+		},
+		"TradeSpan": {
+			"SpotUSDT": true,
+			"SpotBTC": true,
+			"Futures": true
+		},
+		"DurationDay": 10000000000000000000000000,
+		"Price": 10000000000000000000000000
+	}
+}

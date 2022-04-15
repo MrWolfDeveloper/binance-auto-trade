@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Binance System Login</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/skeleton.css">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div style="margin: 20%;background-color: #F0F3F5;padding: 60px;">
+                <center>
+                    <h2>EXB System Login</h2>
+                </center>
+
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="Username">Username</label>
+                        <input class="u-full-width" type="text" placeholder="Username" id="Username">
+                    </div>
+                    <div class="twelve columns">
+                        <label for="Password">Password</label>
+                        <input class="u-full-width" type="password" placeholder="Password" id="Password">
+                    </div>
+                    <div class="twelve columns">
+                        <button onclick="Login()" id="LoginBTN" style="width: 100%;margin-top: 25px;">Login</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <script src="/js/jquery-3.6.0.min.js"></script>
+        <script>
+            function Login() {
+                var Username = $('input#Username').val();
+                var Password = $('input#Password').val();
+
+                $('button#LoginBTN').text('Please wait ...')
+                $('button#LoginBTN').prop('disabled', true);
+
+                if (Username.length < 3 || Password.length < 3) return alert('Please insert valid username / password!');
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/system/login',
+                    data: {
+                        Username: Username,
+                        Password: Password
+                    },
+                    success: (Data) => {
+                        if (Data.status) return (window.location = '/system');
+
+                        $('button#LoginBTN').text('Login')
+                        $('button#LoginBTN').prop('disabled', false);
+                        
+                        alert('Invalid username / password!');
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

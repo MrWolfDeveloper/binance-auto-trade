@@ -1,0 +1,151 @@
+# @APIURL = http://api.exb.app
+@APIURL = http://localhost:3000
+@Username = ktm
+
+# @name Login
+POST {{APIURL}}/auth HTTP/1.1
+content-type: application/json; charset=utf-8
+
+{
+    "EXB_API_KEY":"GCG0UJOXRKJ7TA0DZ3IEFK0Q353AZIZDTE6F7SQTQ7K2VL6OXYSB87HOXJWRQTAQ",
+	"EXB_API_SECRET":"TDso2GNOEUV0qhGvg4VyBaHpjh2xgK5b1gJVZr5ZHgl29KasnFrUDUg5U7nRlblz"
+}
+
+###
+
+@AuthToken = {{Login.response.body.token}}
+
+# @name AddUser
+POST {{APIURL}}/user HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+    "Username": "{{Username}}",
+	"Email": "sinabfi@yahoo.com",
+	"PhoneNumber": "+989324198112"
+}
+
+###
+
+# @name GetUserAccountStatus
+GET {{APIURL}}/user/account-status/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+
+# @name ChangeAccountStatus
+PUT {{APIURL}}/account-status HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+	"Username": "{{Username}}",
+	"NewStatus": "monetary-plan"
+}
+
+###
+
+# @name AddAPI
+PUT {{APIURL}}/exchanges/add-api HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+	"Username": "{{Username}}",
+	"Exchange": "binance",
+	"APIKey": "OATRjzu78StnAZjVpnd2NhSMHgm7uE8pyiNtgBTCVJwvKn0P3Xd7uBDfj4evvmqj",
+	"APISecret": "zHjmRLmwvnJhBLXicfkfij2v0fiWMmYICYoib6bhGGKxD15E6F1W3YyV1Rcp2Lhp"
+}
+
+###
+
+# @name GetAPIData
+GET {{APIURL}}/exchanges/api-data/binance/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+
+# @name AddPlanToUser
+POST {{APIURL}}/plan/add-plan HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+	"Username": "{{Username}}",
+	"SubscriptionPlanID": "free",
+	"TXID": "free"
+}
+
+###
+
+# @name GePSArraytPlanData
+GET {{APIURL}}/plan/get-plan/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+
+# @name GetUserSignals
+GET {{APIURL}}/signal/history/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+
+# @name GetUserWalletHistory
+GET {{APIURL}}/wallet/history/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+# @name ChangeUserTradeCeiling
+PUT {{APIURL}}/trade-ceiling HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+	"Username": "{{Username}}",
+	"NewCeiling": {
+		"Binance": {
+			"Spot": {
+				"USDT": 1900,
+				"BTC": 0.0252
+			},
+			"Futures": {
+				"USDT": 1900
+			}
+		}
+	}
+}
+
+###
+# @name ChangeUserSmartStoplossStatus
+PUT {{APIURL}}/smart-stoploss HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+{
+	"Username": "{{Username}}",
+	"SmartStoplossStatus": true
+}
+
+###
+# @name GetUserBalances
+GET {{APIURL}}/user-balances/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+# @name GetUserSumBalances
+GET {{APIURL}}/user/sum-user-balances/{{Username}} HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
+
+###
+# @name PublicHistory
+GET {{APIURL}}/signal/public-history HTTP/1.1
+content-type: application/json; charset=utf-8
+authorization: Bearer {{AuthToken}}
