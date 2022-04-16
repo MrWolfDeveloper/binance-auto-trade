@@ -88,6 +88,8 @@ BinanceKillers = {
 						CapitalOBJ.Range.pop();
 					}
 
+					if (CapitalOBJ.Range.toString() === '1') CapitalOBJ.Range = '2';
+
 					StopLoss = StopLoss[0].toLowerCase();
 
 					var StopLossOBJ = {};
