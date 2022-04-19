@@ -66,7 +66,7 @@ BinanceKillers = {
 					else if (ExchangeType[1] === 'short') ReductionCoefficient = 1.001;
 
 					var CapitalOBJ = {
-						Percentage: '2'
+						Percentage: '3'
 					};
 
 					var CurrencyAndRange = Currency[0].split('(');
