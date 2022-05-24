@@ -4,9 +4,9 @@ const Request = require('request');
 const SpotPricePrecision = require(`${__dirname}/../../../../../storage/exchange-data/symbol-data-spot.json`);
 const FuturesPricePrecision = require(`${__dirname}/../../../../../storage/exchange-data/symbol-data-futures.json`);
 
-var exbforcesignal = exbforcesignal || {};
+var Predictum = Predictum || {};
 
-exbforcesignal = {
+Predictum = {
     Precision: (ExchangeType, Currency, Amount) => {
         if (typeof Currency === 'object')
             Currency = Currency[0].replace('#', '').replace('/', '');
@@ -22,6 +22,10 @@ exbforcesignal = {
         // if (Amount.indexOf('.') < 0) return 0;
 
         // return Amount.split('.')[1].length;
+    },
+
+    FindPrecision: (Currency) => {
+        return;
     },
 
     ToFixed: (Number, Fixed) => {
@@ -43,13 +47,9 @@ exbforcesignal = {
                 Content.message = Content.message.replace(/\s+$/, '');
                 Content.message = Content.message.replace(/[ ]{1,}/gm, '');
 
-                var CloseBeforeBreakOut = Content.message.match(
-                    /Stopreachedbeforebreakout/gm
-                );
-
                 var ForceStop = Content.message.match(RegexFile.ForceStop);
 
-                var Direction = Content.message.match(RegexFileBK.ExchangeType);
+                var Direction = Content.message.match(RegexFile.RegexFileBK);
 
                 console.log(Direction, 'Direction');
 
@@ -167,7 +167,7 @@ exbforcesignal = {
                         StopLossOBJ.Number = StopLossOBJ.Number;
 
                         // Change StopLoss number before inster
-                        var StopLossPrecision = exbforcesignal.Precision(
+                        var StopLossPrecision = Predictum.Precision(
                             ExchangeType[0],
                             Currency,
                             StopLossOBJ.Number
@@ -200,7 +200,7 @@ exbforcesignal = {
 
                     var StructuredTargets = NewTargets.map((Target) => {
                         var TargetNumber = Target.replace('Target:', '').trim();
-                        var TargetPrecision = exbforcesignal.Precision(
+                        var TargetPrecision = Predictum.Precision(
                             ExchangeType[0],
                             Currency,
                             TargetNumber
@@ -217,7 +217,7 @@ exbforcesignal = {
                     var StructuredOpenTargets = OpenTargets.map(
                         (OpenTarget) => {
                             var OpenTargetNumber = OpenTarget;
-                            var OpenTargetPrecision = exbforcesignal.Precision(
+                            var OpenTargetPrecision = Predictum.Precision(
                                 ExchangeType[0],
                                 Currency,
                                 OpenTargetNumber
@@ -252,36 +252,6 @@ exbforcesignal = {
                         PositionStatus: 'open',
                         SignalDate: new Date(Date.now())
                     };
-                } else if (CloseBeforeBreakOut) {
-                    if (typeof Content.reply_to === 'undefined') return;
-
-                    var CloseChatIDRegex = new RegExp(
-                        `f-${Content.reply_to.reply_to_msg_id}$`,
-                        'i'
-                    );
-
-                    console.log(
-                        global.BinanceFutures.PendingPositions.Opening,
-                        'before'
-                    );
-
-                    Object.keys(
-                        global.BinanceFutures.PendingPositions.Opening
-                    ).map((Currencies) => {
-                        global.BinanceFutures.PendingPositions.Opening[
-                            Currencies
-                        ].map((Signal, Index) => {
-                            if (CloseChatIDRegex.test(Signal.ChatID))
-                                global.BinanceFutures.PendingPositions.Opening[
-                                    Currencies
-                                ].splice(Index, 1);
-                        });
-                    });
-
-                    console.log(
-                        global.BinanceFutures.PendingPositions.Opening,
-                        'after'
-                    );
                 } else if (Direction) {
                     Content.message = Content.message.toLowerCase();
 
@@ -378,7 +348,7 @@ exbforcesignal = {
                     );
 
                     // Change StopLoss number before insert
-                    var StopLossPrecision = exbforcesignal.Precision(
+                    var StopLossPrecision = Predictum.Precision(
                         ExchangeType[0],
                         Currency.join(''),
                         StopLossOBJ.Number
@@ -401,7 +371,7 @@ exbforcesignal = {
 
                     var StructuredTargets = NewTargets.map((Target) => {
                         var TargetNumber = Target.replace('Target:', '').trim();
-                        var TargetPrecision = exbforcesignal.Precision(
+                        var TargetPrecision = Predictum.Precision(
                             ExchangeType[0],
                             Currency.join(''),
                             TargetNumber
@@ -460,4 +430,4 @@ exbforcesignal = {
     }
 };
 
-exports.exbforcesignal = exbforcesignal;
+exports.Predictum = Predictum;

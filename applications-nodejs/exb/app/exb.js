@@ -1,7 +1,10 @@
-const DataBaseQuery = require('../components/database/database-query').DatabaseQuery;
-const MainLog = require('../components/trade/bot-log/main-signal-log').MainSignalLog;
+const DataBaseQuery =
+    require('../components/database/database-query').DatabaseQuery;
+const MainLog =
+    require('../components/trade/bot-log/main-signal-log').MainSignalLog;
 
-const SignalsWatcher = require('../components/watcher/signal-watcher').SignalWatcher;
+const SignalsWatcher =
+    require('../components/watcher/signal-watcher').SignalWatcher;
 const RequestManager = require('../components/trade/request-manager');
 const ChartListener = require('../components/trade/chart-listener');
 
@@ -15,88 +18,95 @@ const BinanceSpot = require('../components/trade/exchanges/binance/spot');
 
 const Logger = require('../components/main/logger').Logger;
 
-global.SpotPositionChecker = new (require(`../components/trade/exchanges/binance/spot-position-checker.js`))();
-global.FuturesPositionChecker = new (require(`../components/trade/exchanges/binance/futures-position-checker.js`))();
+global.SpotPositionChecker =
+    new (require(`../components/trade/exchanges/binance/spot-position-checker.js`))();
+global.FuturesPositionChecker =
+    new (require(`../components/trade/exchanges/binance/futures-position-checker.js`))();
 
 /* --------------------------- Connect to database --------------------------- */
 (async () => {
-	try {
-		// await DataBaseQuery.DatabaseConnect('mongodb://localhost:27017/EXBDatabase');
-		await DataBaseQuery.DatabaseConnect(
-			'mongodb+srv://mrwolf:Aa106677889%40@exbdedicatedsirvan.mwyhi.mongodb.net/EXBDedicatedSirvan?retryWrites=true&w=majority'
-		);
+    try {
+        // await DataBaseQuery.DatabaseConnect('mongodb://localhost:27017/EXBDatabase');
+        await DataBaseQuery.DatabaseConnect(
+            'mongodb+srv://mrwolf:Aa106677889%40@exbdedicatedsirvan.mwyhi.mongodb.net/EXBDedicatedSirvan?retryWrites=true&w=majority'
+        );
 
-		// Set logger global
-		global.Logger = Logger;
-	} catch (DatabaseError) {
-		global.Logger.error(DatabaseError, __filename);
-	}
+        // Set logger global
+        global.Logger = Logger;
+    } catch (DatabaseError) {
+        global.Logger.error(DatabaseError, __filename);
+    }
 })().then(async () => {
-	try {
-		global.Logger.info('Database connected!');
+    try {
+        global.Logger.info('Database connected!');
 
-		/* -------------------------------------------------------------------------- */
-		/*                           Define global variables                          */
-		/* -------------------------------------------------------------------------- */
-		global.SpotMonitorList = {
-			TakeProfit: [],
-			StopLoss: []
-		}; // Spot oco order checker
-		global.FuturesMonitorList = {}; // Futures order checker
+        /* -------------------------------------------------------------------------- */
+        /*                           Define global variables                          */
+        /* -------------------------------------------------------------------------- */
+        global.SpotMonitorList = {
+            TakeProfit: [],
+            StopLoss: []
+        }; // Spot oco order checker
+        global.FuturesMonitorList = {}; // Futures order checker
 
-		// global last proxy
-		global.LastProxy = '';
+        // global last proxy
+        global.LastProxy = '';
 
-		/* -------------------------------------------------------------------------- */
-		/*                               Request manager                              */
-		/* -------------------------------------------------------------------------- */
-		// Deprecated
-		// global.RequestManager = new RequestManager();
+        /* -------------------------------------------------------------------------- */
+        /*                               Request manager                              */
+        /* -------------------------------------------------------------------------- */
+        // Deprecated
+        // global.RequestManager = new RequestManager();
 
-		/* -------------------------------------------------------------------------- */
-		/*                               Signal watcher                               */
-		/* -------------------------------------------------------------------------- */
-		SignalsWatcher.AddWatcherToFiles([ 'Rastad Signals', 'exbforcesignal', 'BinanceKillers' ]);
+        /* -------------------------------------------------------------------------- */
+        /*                               Signal watcher                               */
+        /* -------------------------------------------------------------------------- */
+        SignalsWatcher.AddWatcherToFiles([
+            'Rastad Signals',
+            'exbforcesignal',
+            'BinanceKillers',
+            'Predictum'
+        ]);
 
-		/* -------------------------------------------------------------------------- */
-		/*                              Binance websocket                             */
-		/* -------------------------------------------------------------------------- */
-		global.BinanceWebsocket = new BinanceWebSocket();
+        /* -------------------------------------------------------------------------- */
+        /*                              Binance websocket                             */
+        /* -------------------------------------------------------------------------- */
+        global.BinanceWebsocket = new BinanceWebSocket();
 
-		/* -------------------------------------------------------------------------- */
-		/*                               Binance futures                              */
-		/* -------------------------------------------------------------------------- */
-		global.BinanceFutures = new BinanceFutures();
-		// global.BinanceFutures.AddFromDatabase();
-		global.BinanceWebsocket.FuturesPrices();
+        /* -------------------------------------------------------------------------- */
+        /*                               Binance futures                              */
+        /* -------------------------------------------------------------------------- */
+        global.BinanceFutures = new BinanceFutures();
+        // global.BinanceFutures.AddFromDatabase();
+        global.BinanceWebsocket.FuturesPrices();
 
-		/* ------------------------ Futures positions checker ----------------------- */
-		global.FuturesPositionChecker.RunFuturesChecker();
+        /* ------------------------ Futures positions checker ----------------------- */
+        global.FuturesPositionChecker.RunFuturesChecker();
 
-		/* -------------------------------------------------------------------------- */
-		/*                                Binance spot                                */
-		/* -------------------------------------------------------------------------- */
-		global.BinanceSpot = new BinanceSpot();
+        /* -------------------------------------------------------------------------- */
+        /*                                Binance spot                                */
+        /* -------------------------------------------------------------------------- */
+        global.BinanceSpot = new BinanceSpot();
 
-		// Make sure websocket connected
-		global.ChartListener = new ChartListener();
+        // Make sure websocket connected
+        global.ChartListener = new ChartListener();
 
-		global.ChartListener.AddPendingStopLossFromDatabase();
+        global.ChartListener.AddPendingStopLossFromDatabase();
 
-		// Create websocket message listener
-		global.SpotPositionChecker.RunSpotChecker();
+        // Create websocket message listener
+        global.SpotPositionChecker.RunSpotChecker();
 
-		// setInterval(() => {
-		// 	console.log(global.SpotMonitorList, 'global.SpotMonitorList');
-		// 	console.log(global.FuturesMonitorList, 'global.FuturesMonitorList');
-		// }, 20000);
+        // setInterval(() => {
+        // 	console.log(global.SpotMonitorList, 'global.SpotMonitorList');
+        // 	console.log(global.FuturesMonitorList, 'global.FuturesMonitorList');
+        // }, 20000);
 
-		// Add signals from database
-		// global.BinanceSpot.AddFromDatabase();
+        // Add signals from database
+        // global.BinanceSpot.AddFromDatabase();
 
-		MainLog.Futures.PriceStream();
-		global.Logger.info('EXB bot running!');
-	} catch (Error) {
-		global.Logger.error(Error, __filename);
-	}
+        MainLog.Futures.PriceStream();
+        global.Logger.info('EXB bot running!');
+    } catch (Error) {
+        global.Logger.error(Error, __filename);
+    }
 });
