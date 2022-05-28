@@ -62,10 +62,10 @@ global.FuturesPositionChecker =
         /*                               Signal watcher                               */
         /* -------------------------------------------------------------------------- */
         SignalsWatcher.AddWatcherToFiles([
-            'Rastad Signals',
-            'exbforcesignal',
-            'BinanceKillers',
-            'Predictum'
+            // 'Rastad Signals',
+            'exbforcesignal'
+            // 'BinanceKillers',
+            // 'Predictum'
         ]);
 
         /* -------------------------------------------------------------------------- */
