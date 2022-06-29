@@ -434,22 +434,22 @@ exbforcesignal = {
                 } else if (ForceStop) {
                     if (typeof Content.reply_to === 'undefined') return;
 
-                    // Request(
-                    // 	{
-                    // 		url: 'https://api.exb.app/external/dce215a2630deaf69c233ee9fc883fb0cb9aa143',
-                    // 		method: 'POST',
-                    // 		headers: {
-                    // 			'content-type': 'application/json'
-                    // 		},
-                    // 		body: {
-                    // 			ChatID: `rsf-${Content.reply_to.reply_to_msg_id}`
-                    // 		},
-                    // 		json: true
-                    // 	},
-                    // 	(err, httpResponse, body) => {
-                    // 		console.log(err, body);
-                    // 	}
-                    // );
+                    Request(
+                        {
+                            url: 'https://api.exb.app/external/dce215a2630deaf69c233ee9fc883fb0cb9aa143',
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: {
+                                ChatID: `rsf-${Content.reply_to.reply_to_msg_id}`
+                            },
+                            json: true
+                        },
+                        (err, httpResponse, body) => {
+                            console.log(err, body);
+                        }
+                    );
                 }
             });
         });
