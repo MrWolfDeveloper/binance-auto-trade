@@ -1,1 +1,190 @@
-{"id":16541,"uuid":"96e6a9b6-366f-4f3d-a0c6-912fc612a498","user_id":10453,"filename":"custom","source":"repositories-custom","generated":"# Project Documentation: Binance Auto-Trading Bot with Telegram Integration\n\n## Overview\n\nThis project encompasses a multi-functional bot system designed to seamlessly integrate with Telegram to read, analyze, and act upon trading signals. Additionally, it features an interface to manage users, their funds, and create manual trade signals separate from Telegram inputs. The core functionalities include:\n\n- **Telegram Bot Integration**: For reading and analyzing trading signals.\n- **User Management and Requests Dashboard**: A panel to manage user data and create manual trade requests.\n- **Binance Trading Bot**: For executing trades based on signals through Binance, and managing those trades.\n\n## Key Components\n\n### 1. Telegram Bot Integration\n\nThe Telegram Bot is responsible for reading and processing trading signals from specific channels. It utilizes these signals to generate trades on Binance. This functionality includes:\n\n- **Reading Signals**: The bot connects to predefined Telegram channels, reads trading signals, and parses them for actionable insights.\n- **Creating Orders**: Using the parsed signal data, the bot can automatically generate orders on Binance.\n\n### 2. User Management Panel\n\nA user interface panel for administrators to:\n\n- **Create Trade Requests**: Apart from Telegram signals, admin can create trade signals manually through the panel.\n- **Manage Users**: Handle user registration, subscriptions, and second-level authentication.\n- **Fund Management**: Admin can add or deduct funds from user accounts and manage other financial settings.\n\n### 3. Binance Trading Bot\n\nThe bot integrates with Binance to execute and manage trades. Its capabilities include:\n\n- **Executing Signals**: Automated trading based on signals from Telegram or admin panel.\n- **Managing Open Positions**: Tracks open trades and their performances.\n- **Calculating Quantities**: Uses predefined settings to compute trade quantities based on user balance and signal data.\n- **Handling Different Exchange Types**: Supports both spot and futures trading on Binance.\n- **Stop Loss and Take Profit Management**: Automated setting of stop loss and take profit orders based on the given signals.\n\n## Detailed Functionality\n\n### Telegram Signal Processing\n\nThis component fetches and processes signals from Telegram. Here is a glimpse of the code that does this:\n\n```javascript\nasync GetSignal(ChatID) {\n    try {\n        var Signal = await DatabaseQuery.AsyncMakeDatabaseQuery({\n            DBQueryMethod: 'Select',\n            MethodData: {\n                ModelName: 'exb-signals',\n                SelectKeys: 'ChatID ChannelID ExchangeType Currency EnterPrice PositionOrderID ...',\n                Where: { ChatID: ChatID }\n            }\n        });\n        return Signal[1][0];\n    } catch (ReturnError) {\n        throw new Error(ReturnError);\n    }\n}\n```\nThis code is responsible for querying the database to fetch the signal details based on the `ChatID`.\n\n### Multi-User Trade Execution\n\nWhen a new signal is received, the bot can execute trades for multiple users as follows:\n\n```javascript\nasync MultiUserTrade(Signal, CurrencyPrice) {\n    const UsersPack = await User.GetTradeUsers('Spot', Signal.Currency[1]);\n    UsersPack.map((UserList, UserIndex) => {\n        setTimeout(() => {\n            UserList.map(async (UserItem) => {\n                const Currency = `${Signal.Currency[0]}${Signal.Currency[1]}`;\n                const Quantity = await this.CalculationQuantity(\/* params *\/);\n                const MarketStatus = await this.Market(Currency, Quantity, Signal.ChatID, UserItem.BinanceConnection);\n                \/\/ Additional handling...\n            });\n        }, 1000);\n    });\n}\n```\nThis function processes the trades for all users assigned to a specific trading signal, ensuring each user's parameters are respected.\n\n### User Management & Signal Dashboard\n\n**Route to fetch all signals**:\n\n```javascript\nRouter.get('\/system\/signals', async (Request, Response) => {\n    try {\n        const Signals = await Signal.GetSignals(\/* params *\/);\n        var ReturnData = Signals.map(\/* mapping logic *\/);\n        return Response.json(ReturnData);\n    } catch (ReturnError) {\n        return Response.json([]);\n    }\n});\n```\n\n**Snippet to add trade signal manually**:\n\n```javascript\nRouter.post('\/system\/sendforcesignal', async (Request, Response) => {\n    try {\n        const { EXType, EPFrom, EPTo, CFrom, CTo, T1, T2, T3, T4, T5, OT, CapitalText, StoplossText } = Request.body;\n        var TargetsText = \/* target text formation logic *\/;\n        var TelegramMessage = `${EXType} ${CFrom}\/${CTo} Enter price: ${EPFrom} ...`;\n        FS.writeFileSync(\/* file path *\/, TelegramMessage);\n        let cmd = `python3 \/* script path *\/`;\n        let stdout = execSync(cmd);\n        return Response.json(stdout.toString());\n    } catch (Error) {\n        return Response.json([]);\n    }\n});\n```\nBoth of these snippets demonstrate how signals can be managed and manually inputted into the system.\n\n### Binance Order Management\n\n**Spot Trade Execution Example**:\n\n```javascript\nasync Market(Currency, Quantity, ChatID, BinanceConnection) {\n    try {\n        const OrderStatus = await BinanceConnection.marketBuy(Currency, this.ScientificToDecimal(Quantity));\n        \/\/ Execution logic...\n    } catch (ReturnError) { \/* error handling *\/ }\n}\n```\n\n**Futures Close Position Example**:\n\n```javascript\nasync ClosePosition(PositionType, Currency, Quantity, BinanceConnection) {\n    var OrderType;\n    var Options = {};\n    Quantity = Quantity.toFixed(FuturesEXData[Currency].QuantityPrecision);\n    if (PositionType === 'long') {\n        OrderType = 'futuresMarketSell';\n        Options = { positionSide: 'LONG', side: 'BUY' };\n    } else if (PositionType === 'short') {\n        OrderType = 'futuresMarketBuy';\n        Options = { positionSide: 'SHORT', side: 'SELL' };\n    }\n    var OrderStatus = await BinanceConnection[OrderType](Currency, Number(Quantity), Options);\n    return OrderStatus;\n}\n```\n\n## Setting Up and Deployment\n\n### Prerequisites\n\n- **Node.js**: Ensure Node.js is installed.\n- **MongoDB**: A MongoDB instance (either local or cloud) for database operations.\n- **Binance Account**: Binance API keys for spot and futures trading.\n\n### Installation\n\n1. Clone the repository\n2. Install dependencies using npm:\n   ```sh\n   npm install\n   ```\n3. Configure environment variables in a `.env` file:\n   ```sh\n   DB_URI=<Your MongoDB URI>\n   BINANCE_API_KEY=<Your Binance API Key>\n   BINANCE_API_SECRET=<Your Binance API Secret>\n   TELEGRAM_BOT_TOKEN=<Your Telegram Bot Token>\n   ```\n\n### Running the Application\n\n1. Start the server:\n   ```sh\n   npm start\n   ```\n2. Ensure that the server is running correctly and the Telegram bot is connected and listening to the specified channels.\n\n## Conclusion\n\nThis project is designed for automating trading operations and signal management using a robust integration between Telegram and Binance. The comprehensive system enables multiple user management while ensuring accurate and timely trades based on signals.\n\nFor more detailed information on specific functionalities or code, please refer to the relevant sections in the source code files.\n\n---\n\n*This documentation provides a comprehensive overview of the project's architecture, key features, and deployment steps. For precise technical information, refer to the code snippets and detailed sections provided*   .","created_at":"2024-07-07T20:16:07.000000Z","updated_at":"2024-07-07T20:16:07.000000Z","deleted_at":null,"model_type":1,"generation_type":8,"generation_from":2,"tag":null,"archived":0}
+# Project Documentation: Binance Auto-Trading Bot with Telegram Integration
+
+## Overview
+
+This project encompasses a multi-functional bot system designed to seamlessly integrate with Telegram to read, analyze, and act upon trading signals. Additionally, it features an interface to manage users, their funds, and create manual trade signals separate from Telegram inputs. The core functionalities include:
+
+- **Telegram Bot Integration**: For reading and analyzing trading signals.
+- **User Management and Requests Dashboard**: A panel to manage user data and create manual trade requests.
+- **Binance Trading Bot**: For executing trades based on signals through Binance, and managing those trades.
+
+## Key Components
+
+### 1. Telegram Bot Integration
+
+The Telegram Bot is responsible for reading and processing trading signals from specific channels. It utilizes these signals to generate trades on Binance. This functionality includes:
+
+- **Reading Signals**: The bot connects to predefined Telegram channels, reads trading signals, and parses them for actionable insights.
+- **Creating Orders**: Using the parsed signal data, the bot can automatically generate orders on Binance.
+
+### 2. User Management Panel
+
+A user interface panel for administrators to:
+
+- **Create Trade Requests**: Apart from Telegram signals, admin can create trade signals manually through the panel.
+- **Manage Users**: Handle user registration, subscriptions, and second-level authentication.
+- **Fund Management**: Admin can add or deduct funds from user accounts and manage other financial settings.
+
+### 3. Binance Trading Bot
+
+The bot integrates with Binance to execute and manage trades. Its capabilities include:
+
+- **Executing Signals**: Automated trading based on signals from Telegram or admin panel.
+- **Managing Open Positions**: Tracks open trades and their performances.
+- **Calculating Quantities**: Uses predefined settings to compute trade quantities based on user balance and signal data.
+- **Handling Different Exchange Types**: Supports both spot and futures trading on Binance.
+- **Stop Loss and Take Profit Management**: Automated setting of stop loss and take profit orders based on the given signals.
+
+## Detailed Functionality
+
+### Telegram Signal Processing
+
+This component fetches and processes signals from Telegram. Here is a glimpse of the code that does this:
+
+```javascript
+async GetSignal(ChatID) {
+    try {
+        var Signal = await DatabaseQuery.AsyncMakeDatabaseQuery({
+            DBQueryMethod: 'Select',
+            MethodData: {
+                ModelName: 'exb-signals',
+                SelectKeys: 'ChatID ChannelID ExchangeType Currency EnterPrice PositionOrderID ...',
+                Where: { ChatID: ChatID }
+            }
+        });
+        return Signal[1][0];
+    } catch (ReturnError) {
+        throw new Error(ReturnError);
+    }
+}
+```
+This code is responsible for querying the database to fetch the signal details based on the `ChatID`.
+
+### Multi-User Trade Execution
+
+When a new signal is received, the bot can execute trades for multiple users as follows:
+
+```javascript
+async MultiUserTrade(Signal, CurrencyPrice) {
+    const UsersPack = await User.GetTradeUsers('Spot', Signal.Currency[1]);
+    UsersPack.map((UserList, UserIndex) => {
+        setTimeout(() => {
+            UserList.map(async (UserItem) => {
+                const Currency = `${Signal.Currency[0]}${Signal.Currency[1]}`;
+                const Quantity = await this.CalculationQuantity(/* params */);
+                const MarketStatus = await this.Market(Currency, Quantity, Signal.ChatID, UserItem.BinanceConnection);
+                // Additional handling...
+            });
+        }, 1000);
+    });
+}
+```
+This function processes the trades for all users assigned to a specific trading signal, ensuring each user's parameters are respected.
+
+### User Management & Signal Dashboard
+
+**Route to fetch all signals**:
+
+```javascript
+Router.get('/system/signals', async (Request, Response) => {
+    try {
+        const Signals = await Signal.GetSignals(/* params */);
+        var ReturnData = Signals.map(/* mapping logic */);
+        return Response.json(ReturnData);
+    } catch (ReturnError) {
+        return Response.json([]);
+    }
+});
+```
+
+**Snippet to add trade signal manually**:
+
+```javascript
+Router.post('/system/sendforcesignal', async (Request, Response) => {
+    try {
+        const { EXType, EPFrom, EPTo, CFrom, CTo, T1, T2, T3, T4, T5, OT, CapitalText, StoplossText } = Request.body;
+        var TargetsText = /* target text formation logic */;
+        var TelegramMessage = `${EXType} ${CFrom}/${CTo} Enter price: ${EPFrom} ...`;
+        FS.writeFileSync(/* file path */, TelegramMessage);
+        let cmd = `python3 /* script path */`;
+        let stdout = execSync(cmd);
+        return Response.json(stdout.toString());
+    } catch (Error) {
+        return Response.json([]);
+    }
+});
+```
+Both of these snippets demonstrate how signals can be managed and manually inputted into the system.
+
+### Binance Order Management
+
+**Spot Trade Execution Example**:
+
+```javascript
+async Market(Currency, Quantity, ChatID, BinanceConnection) {
+    try {
+        const OrderStatus = await BinanceConnection.marketBuy(Currency, this.ScientificToDecimal(Quantity));
+        // Execution logic...
+    } catch (ReturnError) { /* error handling */ }
+}
+```
+
+**Futures Close Position Example**:
+
+```javascript
+async ClosePosition(PositionType, Currency, Quantity, BinanceConnection) {
+    var OrderType;
+    var Options = {};
+    Quantity = Quantity.toFixed(FuturesEXData[Currency].QuantityPrecision);
+    if (PositionType === 'long') {
+        OrderType = 'futuresMarketSell';
+        Options = { positionSide: 'LONG', side: 'BUY' };
+    } else if (PositionType === 'short') {
+        OrderType = 'futuresMarketBuy';
+        Options = { positionSide: 'SHORT', side: 'SELL' };
+    }
+    var OrderStatus = await BinanceConnection[OrderType](Currency, Number(Quantity), Options);
+    return OrderStatus;
+}
+```
+
+## Setting Up and Deployment
+
+### Prerequisites
+
+- **Node.js**: Ensure Node.js is installed.
+- **MongoDB**: A MongoDB instance (either local or cloud) for database operations.
+- **Binance Account**: Binance API keys for spot and futures trading.
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies using npm:
+   ```sh
+   npm install
+   ```
+3. Configure environment variables in a `.env` file:
+   ```sh
+   DB_URI=<Your MongoDB URI>
+   BINANCE_API_KEY=<Your Binance API Key>
+   BINANCE_API_SECRET=<Your Binance API Secret>
+   TELEGRAM_BOT_TOKEN=<Your Telegram Bot Token>
+   ```
+
+### Running the Application
+
+1. Start the server:
+   ```sh
+   npm start
+   ```
+2. Ensure that the server is running correctly and the Telegram bot is connected and listening to the specified channels.
+
+## Conclusion
+
+This project is designed for automating trading operations and signal management using a robust integration between Telegram and Binance. The comprehensive system enables multiple user management while ensuring accurate and timely trades based on signals.
+
+For more detailed information on specific functionalities or code, please refer to the relevant sections in the source code files.
+
+---
+
+*This documentation provides a comprehensive overview of the project's architecture, key features, and deployment steps. For precise technical information, refer to the code snippets and detailed sections provided*   .
